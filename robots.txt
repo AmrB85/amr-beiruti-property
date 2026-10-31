@@ -4,4 +4,4 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://YOUR-SITE-URL/sitemap.xml
+Sitemap: https://amrb85.github.io/amr-beiruti-property/sitemap.xml
