@@ -1,31 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Amr Beiruti | Dubai Real Estate</title>
-  <meta name="description" content="Learn about Amr Beiruti, Sales Director in Dubai real estate, focused on off-plan developments, property investment and client advisory.">
+
+  <title>About Amr Beiruti | Dubai Real Estate Sales Director</title>
+  <meta name="description" content="Learn about Amr Beiruti, Dubai real estate Sales Director with over six years of experience helping property buyers and investors navigate the Dubai property market.">
+  <meta name="keywords" content="Amr Beiruti, Dubai real estate advisor, Dubai property consultant, Dubai Sales Director, Dubai property investment">
+  <meta name="author" content="Amr Beiruti">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://amrb85.github.io/amr-beiruti-property/about.html">
+
+  <meta name="google-site-verification" content="ZVhR4pgDYsdGLg8ip8xC6fGrrKExQWWif1se7R45MpA" />
+
+  <meta property="og:title" content="About Amr Beiruti | Dubai Real Estate">
+  <meta property="og:description" content="Discover Amr Beiruti's experience, approach and services in the Dubai property market.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://amrb85.github.io/amr-beiruti-property/about.html">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --navy: #101d2b;
-      --navy-light: #192b3d;
-      --gold: #c7a66a;
-      --gold-light: #dfc798;
-      --ivory: #f6f3ed;
-      --white: #ffffff;
-      --muted: #aeb8c2;
-      --ink: #24313e;
+      --navy: #071522;
+      --navy-light: #102438;
+      --gold: #c9a45c;
+      --gold-light: #e2c98e;
+      --white: #f7f7f4;
+      --muted: #aab5bf;
+      --panel: #102131;
+      --border: rgba(201,164,92,.25);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -33,334 +45,408 @@
     }
 
     body {
-      background: var(--ivory);
-      color: var(--ink);
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.75;
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Manrope', sans-serif;
+      line-height: 1.8;
+    }
+
+    body.arabic {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
-    .topbar {
-      background: var(--navy);
-      color: var(--white);
-      padding: 20px 7%;
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7,21,34,.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 82px;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(199,166,106,.3);
+      gap: 20px;
     }
 
-    .brand {
-      font-family: 'Playfair Display', serif;
+    .logo {
       font-size: 21px;
-      letter-spacing: 2px;
-      color: var(--gold-light);
+      font-weight: 800;
+      letter-spacing: .5px;
     }
 
-    .nav {
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
       display: flex;
       align-items: center;
-      gap: 27px;
+      gap: 25px;
+      list-style: none;
       font-size: 13px;
-      color: #e2e6ea;
+      color: #d5dce2;
     }
 
-    .nav a:hover {
+    .nav-links a:hover {
       color: var(--gold-light);
     }
 
-    .language {
-      border: 1px solid var(--gold);
-      padding: 7px 13px;
-      border-radius: 3px;
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .language-button,
+    .menu-button {
+      border: 1px solid var(--border);
       color: var(--gold-light);
       background: transparent;
-      font-family: inherit;
+      padding: 9px 13px;
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 12px;
+    }
+
+    .menu-button {
+      display: none;
+      color: white;
     }
 
     .hero {
+      padding: 105px 0 95px;
       background:
-        linear-gradient(90deg, rgba(10,23,36,.96), rgba(10,23,36,.83)),
-        url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85');
-      background-size: cover;
-      background-position: center;
-      color: var(--white);
-      padding: 105px 8% 100px;
+        linear-gradient(110deg, rgba(7,21,34,.98), rgba(7,21,34,.82)),
+        url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85') center/cover;
+      border-bottom: 1px solid var(--border);
     }
 
     .eyebrow {
       color: var(--gold-light);
       text-transform: uppercase;
       letter-spacing: 3px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
-      margin-bottom: 18px;
+      margin-bottom: 17px;
     }
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 500;
-      line-height: 1.2;
+    body.arabic .eyebrow {
+      letter-spacing: 0;
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 72px);
-      max-width: 750px;
-      margin-bottom: 18px;
-    }
-
-    .hero-role {
-      color: var(--gold-light);
-      font-size: 15px;
-      letter-spacing: 1px;
-    }
-
-    .hero-intro {
-      max-width: 590px;
-      color: #d1d8df;
-      margin-top: 24px;
-      font-size: 16px;
-    }
-
-    .section {
-      padding: 85px 8%;
-    }
-
-    .section-heading {
-      font-size: clamp(31px, 4vw, 43px);
-      color: var(--navy);
+      font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.2;
+      max-width: 850px;
       margin-bottom: 25px;
     }
 
-    .gold-line {
-      width: 58px;
-      height: 2px;
-      background: var(--gold);
-      margin: 24px 0 30px;
-    }
-
-    .story {
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .story p {
-      font-size: 15px;
-      color: #53606b;
-      margin-bottom: 20px;
-    }
-
-    .dark-section {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .dark-section .section-heading {
-      color: var(--white);
-    }
-
-    .dark-section .gold-line {
-      margin-bottom: 40px;
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .step {
-      background: var(--navy-light);
-      border: 1px solid rgba(199,166,106,.25);
-      padding: 28px 22px;
-      min-height: 205px;
-    }
-
-    .step-number {
-      color: var(--gold);
-      font-family: 'Playfair Display', serif;
-      font-size: 27px;
-      margin-bottom: 18px;
-    }
-
-    .step h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
+    .gold {
       color: var(--gold-light);
     }
 
-    .step p {
-      color: #c0c9d1;
+    .hero p {
+      max-width: 720px;
+      color: #d1d9df;
+      font-size: 17px;
+    }
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 4vw, 39px);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 800px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .profile-panel {
+      min-height: 390px;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(201,164,92,.18), transparent 45%),
+        linear-gradient(145deg, #142b3e, #081522);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .monogram {
+      width: 145px;
+      height: 145px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 25px;
+      background: rgba(201,164,92,.06);
+    }
+
+    .profile-panel h3 {
+      font-size: 23px;
+    }
+
+    .profile-panel p {
+      color: var(--gold-light);
       font-size: 13px;
-      line-height: 1.7;
+      margin-top: 5px;
+    }
+
+    .intro-copy p,
+    .content-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .dark-section {
+      background: #0b1b2a;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .principles {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 35px;
+      gap: 20px;
       margin-top: 35px;
     }
 
-    .principle {
-      border-top: 1px solid var(--gold);
-      padding-top: 22px;
+    .principle-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 27px;
     }
 
-    .principle h3 {
-      color: var(--navy);
-      font-size: 23px;
-      margin-bottom: 12px;
+    .principle-card .symbol {
+      color: var(--gold-light);
+      font-size: 25px;
+      margin-bottom: 15px;
     }
 
-    .principle p {
-      color: #65717b;
-      font-size: 14px;
+    .principle-card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
     }
 
-    .quote {
-      background: #eee8dc;
-      padding: 55px 8%;
-      text-align: center;
-    }
-
-    .quote p {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(23px, 3.5vw, 34px);
-      color: var(--navy);
-      max-width: 850px;
-      margin: auto;
-      line-height: 1.5;
-    }
-
-    .contact {
-      background: var(--navy);
-      color: var(--white);
-      text-align: center;
-      padding: 80px 8%;
-    }
-
-    .contact h2 {
-      font-size: clamp(32px, 4vw, 44px);
-      margin-bottom: 18px;
-    }
-
-    .contact p {
-      color: #c2cbd3;
-      max-width: 600px;
-      margin: 0 auto 28px;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      padding: 13px 25px;
-      margin: 7px;
-      border-radius: 2px;
+    .principle-card p {
+      color: var(--muted);
       font-size: 13px;
-      font-weight: 700;
-      transition: .2s;
     }
 
-    .button:hover {
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .experience-item {
+      border-left: 3px solid var(--gold);
+      background: var(--panel);
+      padding: 20px 22px;
+      border-radius: 4px;
+    }
+
+    body.arabic .experience-item {
+      border-left: 0;
+      border-right: 3px solid var(--gold);
+    }
+
+    .experience-item h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .experience-item p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .approach-panel {
+      border: 1px solid var(--border);
+      background: var(--panel);
+      padding: 35px;
+      border-radius: 8px;
+    }
+
+    .approach-panel p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .contact-section {
+      background:
+        linear-gradient(rgba(7,21,34,.94), rgba(7,21,34,.96)),
+        url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80') center/cover;
+    }
+
+    .contact-content {
+      max-width: 760px;
+    }
+
+    .contact-content h2 {
+      font-size: clamp(29px, 4vw, 43px);
+      margin-bottom: 17px;
+    }
+
+    .contact-content p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: .25s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #081522;
+    }
+
+    .btn-gold:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
     }
 
-    .button-outline {
-      background: transparent;
+    .btn-outline {
       border: 1px solid var(--gold);
       color: var(--gold-light);
     }
 
-    footer {
-      background: #0a1420;
-      color: #9ca8b3;
-      text-align: center;
-      padding: 25px 15px;
-      font-size: 11px;
-      letter-spacing: .5px;
+    .btn-outline:hover {
+      background: rgba(201,164,92,.12);
     }
 
-    footer span {
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    footer strong {
       color: var(--gold-light);
     }
 
-    [dir="rtl"] {
-      text-align: right;
-    }
-
-    [dir="rtl"] .gold-line {
-      margin-right: 0;
-      margin-left: auto;
-    }
-
-    [dir="rtl"] .nav {
-      direction: rtl;
-    }
-
-    [dir="rtl"] .hero-intro {
-      margin-right: 0;
-    }
-
-    @media (max-width: 800px) {
-      .topbar {
-        padding: 17px 5%;
-      }
-
-      .nav {
-        gap: 13px;
-      }
-
-      .nav .home-link {
+    @media(max-width: 900px) {
+      .nav-links {
         display: none;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        padding: 25px 5%;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border);
       }
 
-      .hero {
-        padding: 85px 7%;
+      .nav-links.open {
+        display: flex;
       }
 
-      .section {
-        padding: 65px 7%;
+      .menu-button {
+        display: block;
       }
 
-      .steps {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .principles {
+      .intro-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+      }
+
+      .profile-panel {
+        min-height: 300px;
       }
     }
 
-    @media (max-width: 480px) {
-      .brand {
-        font-size: 17px;
+    @media(max-width: 650px) {
+      .section {
+        padding: 65px 0;
       }
 
-      .nav {
-        gap: 10px;
-      }
-
-      .steps {
+      .principles,
+      .experience-grid {
         grid-template-columns: 1fr;
       }
 
-      .step {
-        min-height: auto;
+      .hero {
+        padding: 75px 0;
       }
 
-      .hero {
-        padding-top: 75px;
-        padding-bottom: 75px;
+      .hero p {
+        font-size: 15px;
+      }
+
+      .navbar {
+        min-height: 72px;
+      }
+
+      .nav-links {
+        top: 72px;
+      }
+
+      .approach-panel {
+        padding: 23px;
       }
     }
   </style>
@@ -368,232 +454,381 @@
 
 <body>
 
-  <header class="topbar">
-    <a class="brand" href="index.html">AMR BEIRUTI</a>
+<header>
+  <div class="container navbar">
 
-    <nav class="nav">
-      <a class="home-link" href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
-      <a href="#contact" data-en="Contact" data-ar="تواصل معي">Contact</a>
-      <button class="language" id="languageButton" type="button">العربية</button>
-    </nav>
-  </header>
+    <a href="index.html" class="logo">AMR <span>BEIRUTI</span></a>
 
-  <main>
-    <section class="hero">
-      <div class="eyebrow" data-en="About me" data-ar="نبذة عني">About me</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="#profile" data-en="My Profile" data-ar="ملفي الشخصي">My Profile</a></li>
+      <li><a href="#experience" data-en="Experience" data-ar="الخبرة">Experience</a></li>
+      <li><a href="#approach" data-en="My Approach" data-ar="أسلوبي في العمل">My Approach</a></li>
+      <li><a href="index.html#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+      <li><a href="#contact" data-en="Contact" data-ar="تواصل معي">Contact</a></li>
+    </ul>
 
-      <h1 data-en="Amr Beiruti" data-ar="عمرو بيروتي">Amr Beiruti</h1>
+    <div class="nav-actions">
+      <button class="language-button" id="languageToggle" onclick="toggleLanguage()">العربية</button>
+      <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+    </div>
 
-      <div class="hero-role"
-           data-en="Sales Director · Dubai Real Estate"
-           data-ar="مدير مبيعات · عقارات دبي">
-        Sales Director · Dubai Real Estate
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="eyebrow" data-en="About Amr Beiruti" data-ar="نبذة عن عمرو بيروتي">
+        About Amr Beiruti
       </div>
 
-      <p class="hero-intro"
-         data-en="A practical, client-focused approach to property investment, off-plan developments and the Dubai real estate market."
-         data-ar="نهج عملي يركز على العميل في الاستثمار العقاري والمشاريع قيد الإنشاء وسوق العقارات في دبي.">
-        A practical, client-focused approach to property investment, off-plan developments and the Dubai real estate market.
+      <h1
+        data-en="Real Estate Experience. <span class='gold'>Personal Commitment.</span>"
+        data-ar="خبرة عقارية. <span class='gold'>واهتمام شخصي.</span>">
+        Real Estate Experience. <span class="gold">Personal Commitment.</span>
+      </h1>
+
+      <p
+        data-en="A professional approach to Dubai real estate, built on market knowledge, clear communication and a commitment to understanding each client's objectives."
+        data-ar="أسلوب مهني في التعامل مع سوق العقارات في دبي، قائم على معرفة السوق والتواصل الواضح والاهتمام بفهم أهداف كل عميل.">
+        A professional approach to Dubai real estate, built on market knowledge, clear communication and a commitment to understanding each client's objectives.
       </p>
-    </section>
 
-    <section class="section">
-      <div class="story">
-        <div class="eyebrow" data-en="My background" data-ar="خبرتي">My background</div>
+    </div>
+  </section>
 
-        <h2 class="section-heading"
-            data-en="Experience built around understanding the market"
-            data-ar="خبرة مبنية على فهم السوق">
-          Experience built around understanding the market
+  <section class="section" id="profile">
+    <div class="container intro-grid">
+
+      <div class="profile-panel">
+        <div class="monogram">AB</div>
+        <h3>Amr Beiruti</h3>
+        <p data-en="Sales Director | Dubai Real Estate" data-ar="مدير مبيعات | عقارات دبي">
+          Sales Director | Dubai Real Estate
+        </p>
+      </div>
+
+      <div class="intro-copy">
+
+        <div class="section-heading">
+          <div class="eyebrow" data-en="My Professional Profile" data-ar="ملفي المهني">
+            My Professional Profile
+          </div>
+
+          <h2
+            data-en="Helping You Navigate <span class='gold'>Dubai Property.</span>"
+            data-ar="أساعدك على فهم سوق <span class='gold'>العقارات في دبي.</span>">
+            Helping You Navigate <span class="gold">Dubai Property.</span>
+          </h2>
+        </div>
+
+        <p
+          data-en="My name is Amr Beiruti. I am a Dubai real estate professional and Sales Director with more than six years of experience in the property market."
+          data-ar="أنا عمرو بيروتي، أعمل في المجال العقاري في دبي بصفة مدير مبيعات، ولدي أكثر من ست سنوات من الخبرة في السوق العقاري.">
+          My name is Amr Beiruti. I am a Dubai real estate professional and Sales Director with more than six years of experience in the property market.
+        </p>
+
+        <p
+          data-en="Throughout my professional experience, I have worked with property buyers and investors, helping them explore opportunities across different communities and property segments in Dubai."
+          data-ar="خلال مسيرتي المهنية، تعاملت مع مشترين ومستثمرين عقاريين وساعدتهم على استكشاف فرص متنوعة في مختلف مناطق دبي وأنواع العقارات.">
+          Throughout my professional experience, I have worked with property buyers and investors, helping them explore opportunities across different communities and property segments in Dubai.
+        </p>
+
+        <p
+          data-en="I believe that a property decision should be based on more than attractive marketing or a headline price. Understanding the location, developer, property details, costs and the client's long-term objectives is essential."
+          data-ar="أؤمن بأن القرار العقاري يجب ألا يعتمد فقط على الإعلانات الجذابة أو السعر المعلن. فمن الضروري فهم الموقع والمطور وتفاصيل العقار والتكاليف وأهداف العميل على المدى الطويل.">
+          I believe that a property decision should be based on more than attractive marketing or a headline price. Understanding the location, developer, property details, costs and the client's long-term objectives is essential.
+        </p>
+
+        <p
+          data-en="My focus is to make the property journey clearer and more organised, while maintaining professional communication and support throughout the process."
+          data-ar="هدفي هو جعل الرحلة العقارية أكثر وضوحاً وتنظيماً، مع الحفاظ على التواصل المهني وتقديم الدعم خلال مختلف مراحل العملية.">
+          My focus is to make the property journey clearer and more organised, while maintaining professional communication and support throughout the process.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-section" id="experience">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow" data-en="Experience & Market Knowledge" data-ar="الخبرة ومعرفة السوق">
+          Experience & Market Knowledge
+        </div>
+
+        <h2
+          data-en="Understanding the <span class='gold'>Dubai Property Market.</span>"
+          data-ar="فهم <span class='gold'>السوق العقاري في دبي.</span>">
+          Understanding the <span class="gold">Dubai Property Market.</span>
         </h2>
 
-        <div class="gold-line"></div>
+        <p
+          data-en="Dubai is a diverse property market, with established communities, new developments and different opportunities for homeowners and investors."
+          data-ar="يتميّز سوق دبي العقاري بالتنوّع، فهو يضم مناطق سكنية راسخة ومشاريع جديدة وفرصاً مختلفة للمشترين والمستثمرين.">
+          Dubai is a diverse property market, with established communities, new developments and different opportunities for homeowners and investors.
+        </p>
+      </div>
 
-        <div class="english-story">
-          <p>Since 2021, I have been working in Dubai's real estate market, with a focus on off-plan developments, property investment and helping buyers understand the opportunities available across the city.</p>
+      <div class="experience-grid">
 
-          <p>My work involves more than presenting properties. It means understanding the market, following new developments, evaluating locations, comparing developers and payment structures, and helping clients make decisions that match their financial position and long-term objectives.</p>
+        <article class="experience-item">
+          <h3 data-en="More Than Six Years of Experience" data-ar="أكثر من ست سنوات من الخبرة">
+            More Than Six Years of Experience
+          </h3>
+          <p
+            data-en="Professional experience in Dubai's property market, working with buyers and investors across different property categories."
+            data-ar="خبرة مهنية في سوق العقارات في دبي، مع التعامل مع المشترين والمستثمرين في فئات عقارية مختلفة.">
+            Professional experience in Dubai's property market, working with buyers and investors across different property categories.
+          </p>
+        </article>
 
-          <p>As a Sales Director, I believe successful real estate work requires market knowledge, strong communication, negotiation and the ability to understand different client needs. Whether someone is buying a first home, investing in rental property, purchasing off-plan or expanding an existing portfolio, the advice and strategy should be built around that individual.</p>
+        <article class="experience-item">
+          <h3 data-en="Residential Property Knowledge" data-ar="معرفة بالعقارات السكنية">
+            Residential Property Knowledge
+          </h3>
+          <p
+            data-en="Understanding different residential communities, property types, amenities and lifestyle considerations."
+            data-ar="فهم مختلف المناطق السكنية وأنواع العقارات والمرافق والعوامل المرتبطة بنمط الحياة.">
+            Understanding different residential communities, property types, amenities and lifestyle considerations.
+          </p>
+        </article>
 
-          <p>I believe clients deserve clear information and an honest explanation of the opportunity. That includes looking at the location, developer, pricing, costs, payment terms, potential risks, rental considerations and future resale—not just the attractive parts of a project.</p>
+        <article class="experience-item">
+          <h3 data-en="Investment-Oriented Guidance" data-ar="توجيه يراعي الأهداف الاستثمارية">
+            Investment-Oriented Guidance
+          </h3>
+          <p
+            data-en="Considering rental demand, property costs, location characteristics and the investor's intended holding period."
+            data-ar="مراعاة الطلب الإيجاري وتكاليف العقار وخصائص الموقع والفترة التي ينوي المستثمر الاحتفاظ خلالها بالعقار.">
+            Considering rental demand, property costs, location characteristics and the investor's intended holding period.
+          </p>
+        </article>
 
-          <p>I also believe the relationship should not end when the contract is signed. From the purchase process through handover and the next steps of ownership, I want clients to have someone they can turn to for guidance and support.</p>
+        <article class="experience-item">
+          <h3 data-en="Buyer & Investor Relationships" data-ar="العلاقة مع المشترين والمستثمرين">
+            Buyer & Investor Relationships
+          </h3>
+          <p
+            data-en="A client-focused approach that starts with understanding individual requirements rather than recommending the same solution to everyone."
+            data-ar="أسلوب يضع العميل في المقام الأول، ويبدأ بفهم احتياجاته الخاصة بدلاً من تقديم الحل نفسه للجميع.">
+            A client-focused approach that starts with understanding individual requirements rather than recommending the same solution to everyone.
+          </p>
+        </article>
 
-          <p>My approach is straightforward: understand the objective, study the opportunity, explain the facts, and help the client make an informed decision.</p>
+      </div>
+    </div>
+  </section>
 
-          <p>Real estate is a long-term decision. I value clear communication, realistic expectations and consistent follow-up. My aim is to build relationships based on trust and useful advice, whether a client is entering the Dubai market for the first time or already has experience investing in property.</p>
+  <section class="section" id="approach">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="eyebrow" data-en="How I Work" data-ar="كيف أعمل">
+          How I Work
         </div>
 
-        <div class="arabic-story" hidden>
-          <p>منذ عام 2021 أعمل في سوق العقارات في دبي، مع تركيز على المشاريع قيد الإنشاء والاستثمار العقاري ومساعدة المشترين على فهم الفرص المتاحة بمختلف مناطق المدينة.</p>
-
-          <p>طبيعة عملي ما بتقتصر على عرض العقارات. الأهم هو متابعة السوق والمشاريع الجديدة ودراسة المناطق ومقارنة المطورين وخطط الدفع، ومساعدة العميل على اتخاذ قرار يتناسب مع وضعه المالي وأهدافه على المدى الطويل.</p>
-
-          <p>بصفتي مدير مبيعات، بشوف إن العمل العقاري الناجح بيعتمد على معرفة السوق والتواصل الواضح والتفاوض وفهم احتياجات كل عميل. سواء كان الشخص عم يشتري أول منزل إله، أو عم يستثمر بهدف التأجير، أو عم يشتري عقار قيد الإنشاء، أو عم يوسّع محفظته العقارية، لازم تكون النصيحة والخطة مبنية على احتياجه هو.</p>
-
-          <p>برأيي من حق العميل يحصل على معلومات واضحة وشرح صريح للفرصة العقارية. وهذا بيشمل دراسة المنطقة والمطور والسعر والتكاليف وشروط الدفع والمخاطر المحتملة وفرص التأجير وإعادة البيع، مو بس الجوانب الإيجابية بالمشروع.</p>
-
-          <p>وبآمن كمان إن العلاقة مع العميل ما لازم تنتهي بعد توقيع العقد. من إجراءات الشراء لمرحلة الاستلام والخطوات التالية للملكية، مهم يكون في شخص قادر يرجعله العميل للحصول على التوجيه والمساعدة.</p>
-
-          <p>طريقتي بالعمل بسيطة: أفهم هدف العميل، أدرس الفرصة، أوضح المعلومات، وبساعده ياخد قرار مبني على معرفة.</p>
-
-          <p>القرار العقاري قرار طويل الأمد. لذلك بهتم بالتواصل الواضح والتوقعات الواقعية والمتابعة المستمرة. هدفي بناء علاقات أساسها الثقة والنصيحة المفيدة، سواء كان العميل عم يدخل سوق دبي لأول مرة أو عنده خبرة سابقة بالاستثمار العقاري.</p>
-        </div>
+        <h2
+          data-en="A Client Relationship Built on <span class='gold'>Clarity & Trust.</span>"
+          data-ar="علاقة مهنية تقوم على <span class='gold'>الوضوح والثقة.</span>">
+          A Client Relationship Built on <span class="gold">Clarity & Trust.</span>
+        </h2>
       </div>
-    </section>
-
-    <section class="section dark-section">
-      <div class="eyebrow" data-en="How I work" data-ar="كيف أعمل">How I work</div>
-
-      <h2 class="section-heading"
-          data-en="A clear process. A considered decision."
-          data-ar="خطوات واضحة وقرار مدروس">
-        A clear process. A considered decision.
-      </h2>
-
-      <div class="gold-line"></div>
-
-      <div class="steps">
-        <article class="step">
-          <div class="step-number">01</div>
-          <h3 data-en="Understand first" data-ar="أفهم احتياجك أولاً">Understand first</h3>
-          <p data-en="Understand your objectives, budget, timing and expectations before discussing properties."
-             data-ar="أفهم أهدافك وميزانيتك والوقت المناسب وتوقعاتك قبل ما نحكي عن العقارات.">
-            Understand your objectives, budget, timing and expectations before discussing properties.
-          </p>
-        </article>
-
-        <article class="step">
-          <div class="step-number">02</div>
-          <h3 data-en="Research the opportunity" data-ar="أدرس الفرصة">Research the opportunity</h3>
-          <p data-en="Compare locations, developers, prices, payment plans and relevant market conditions."
-             data-ar="قارن المناطق والمطورين والأسعار وخطط الدفع وظروف السوق المتعلقة بالفرصة.">
-            Compare locations, developers, prices, payment plans and relevant market conditions.
-          </p>
-        </article>
-
-        <article class="step">
-          <div class="step-number">03</div>
-          <h3 data-en="Explain clearly" data-ar="أشرح بوضوح">Explain clearly</h3>
-          <p data-en="Present the important details, advantages, costs and possible risks in a straightforward way."
-             data-ar="أوضح التفاصيل المهمة والمميزات والتكاليف والمخاطر المحتملة بطريقة مباشرة.">
-            Present the important details, advantages, costs and possible risks in a straightforward way.
-          </p>
-        </article>
-
-        <article class="step">
-          <div class="step-number">04</div>
-          <h3 data-en="Stay involved" data-ar="أتابع معك">Stay involved</h3>
-          <p data-en="Provide guidance throughout the buying process and remain available for the next steps."
-             data-ar="أقدم التوجيه خلال عملية الشراء وببقى متاح لمساعدتك بالخطوات التالية.">
-            Provide guidance throughout the buying process and remain available for the next steps.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="eyebrow" data-en="What matters to me" data-ar="المبادئ اللي بهتم فيها">What matters to me</div>
-
-      <h2 class="section-heading"
-          data-en="The principles behind my work"
-          data-ar="المبادئ اللي بتوجّه عملي">
-        The principles behind my work
-      </h2>
-
-      <div class="gold-line"></div>
 
       <div class="principles">
-        <article class="principle">
-          <h3 data-en="Clarity" data-ar="الوضوح">Clarity</h3>
-          <p data-en="Clear information and realistic expectations help clients make better decisions."
-             data-ar="المعلومات الواضحة والتوقعات الواقعية بتساعد العميل ياخد قرارات أفضل.">
-            Clear information and realistic expectations help clients make better decisions.
+
+        <article class="principle-card">
+          <div class="symbol">01</div>
+          <h3 data-en="Understand the Objective" data-ar="فهم الهدف">
+            Understand the Objective
+          </h3>
+          <p
+            data-en="Every client has different priorities. I begin by understanding the purpose of the purchase, budget, preferred location and timeline."
+            data-ar="لكل عميل أولوياته المختلفة. أبدأ بفهم الهدف من الشراء والميزانية والمنطقة المفضلة والوقت المناسب لاتخاذ القرار.">
+            Every client has different priorities. I begin by understanding the purpose of the purchase, budget, preferred location and timeline.
           </p>
         </article>
 
-        <article class="principle">
-          <h3 data-en="Perspective" data-ar="الرؤية الشاملة">Perspective</h3>
-          <p data-en="A property should be considered in the context of the client's wider financial goals."
-             data-ar="لازم نشوف العقار ضمن الصورة الأكبر والأهداف المالية للعميل.">
-            A property should be considered in the context of the client's wider financial goals.
+        <article class="principle-card">
+          <div class="symbol">02</div>
+          <h3 data-en="Evaluate the Opportunity" data-ar="تقييم الفرصة">
+            Evaluate the Opportunity
+          </h3>
+          <p
+            data-en="Property options should be considered carefully, including relevant details, costs, location and potential advantages or risks."
+            data-ar="يجب دراسة الخيارات العقارية بعناية، بما يشمل التفاصيل والتكاليف والموقع والمزايا والمخاطر المحتملة.">
+            Property options should be considered carefully, including relevant details, costs, location and potential advantages or risks.
           </p>
         </article>
 
-        <article class="principle">
-          <h3 data-en="Follow-through" data-ar="المتابعة">Follow-through</h3>
-          <p data-en="Good service means staying engaged, communicating and following up consistently."
-             data-ar="الخدمة الجيدة معناها الاستمرار بالتواصل والمتابعة والاهتمام بالتفاصيل.">
-            Good service means staying engaged, communicating and following up consistently.
+        <article class="principle-card">
+          <div class="symbol">03</div>
+          <h3 data-en="Support Beyond the Purchase" data-ar="المتابعة بعد الشراء">
+            Support Beyond the Purchase
+          </h3>
+          <p
+            data-en="The relationship should not end when a transaction is completed. Post-sales support helps clients navigate relevant next steps."
+            data-ar="لا ينبغي أن تنتهي العلاقة عند إتمام الصفقة. فخدمات ما بعد البيع تساعد العميل على متابعة الخطوات التالية المتعلقة بالعقار.">
+            The relationship should not end when a transaction is completed. Post-sales support helps clients navigate relevant next steps.
           </p>
         </article>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="quote">
-      <p data-en="“The right property decision starts with understanding the person behind the investment.”"
-         data-ar="«القرار العقاري الصحيح بيبدأ بفهم الشخص وهدفه من الاستثمار.»">
-        “The right property decision starts with understanding the person behind the investment.”
-      </p>
-    </section>
+  <section class="section dark-section">
+    <div class="container">
 
-    <section class="contact" id="contact">
-      <div class="eyebrow" data-en="Let's talk" data-ar="خلينا نحكي">Let's talk</div>
+      <div class="section-heading">
+        <div class="eyebrow" data-en="My Perspective" data-ar="وجهة نظري">
+          My Perspective
+        </div>
 
-      <h2 data-en="Tell me what you're looking for."
-          data-ar="خبرني شو عم تدور عليه.">
-        Tell me what you're looking for.
-      </h2>
+        <h2
+          data-en="Dubai Is More Than a Property <span class='gold'>Destination.</span>"
+          data-ar="دبي أكثر من مجرد <span class='gold'>وجهة عقارية.</span>">
+          Dubai Is More Than a Property <span class="gold">Destination.</span>
+        </h2>
+      </div>
 
-      <p data-en="Whether you're exploring Dubai for the first time or considering your next investment, let's start with a conversation."
-         data-ar="سواء عم تستكشف سوق دبي لأول مرة أو عم تفكر باستثمارك القادم، خلينا نبدأ بمحادثة.">
-        Whether you're exploring Dubai for the first time or considering your next investment, let's start with a conversation.
-      </p>
+      <div class="approach-panel">
 
-      <a class="button" href="index.html#qualify"
-         data-en="Start a Buyer Brief" data-ar="ابدأ طلبك العقاري">
-        Start a Buyer Brief
-      </a>
+        <p
+          data-en="Dubai has developed into an internationally recognised real estate market, attracting residents, businesses and investors from around the world."
+          data-ar="أصبحت دبي سوقاً عقارياً معروفاً على المستوى العالمي، وتجذب السكان والشركات والمستثمرين من مختلف أنحاء العالم.">
+          Dubai has developed into an internationally recognised real estate market, attracting residents, businesses and investors from around the world.
+        </p>
 
-      <a class="button button-outline" href="https://wa.me/971585446444"
-         target="_blank" rel="noopener"
-         data-en="WhatsApp me" data-ar="تواصل عبر واتساب">
-        WhatsApp me
-      </a>
+        <p
+          data-en="Its communities offer different lifestyles and property choices, from waterfront residences and established urban districts to emerging master-planned developments."
+          data-ar="توفر مناطق دبي أنماط حياة وخيارات عقارية متنوعة، من المساكن المطلة على الواجهة البحرية والمناطق الحضرية الراسخة إلى المجتمعات الجديدة المتكاملة.">
+          Its communities offer different lifestyles and property choices, from waterfront residences and established urban districts to emerging master-planned developments.
+        </p>
 
-      <p style="margin-top:25px;margin-bottom:0">
-        <a href="mailto:Amrbeiruti@gmail.com">Amrbeiruti@gmail.com</a>
-      </p>
-    </section>
-  </main>
+        <p
+          data-en="For buyers and investors, understanding these differences is important. The right property is not necessarily the most expensive or the most heavily promoted. It is the property that best matches the client's actual objectives and circumstances."
+          data-ar="من المهم للمشترين والمستثمرين فهم هذه الاختلافات. فالعقار المناسب ليس بالضرورة الأغلى أو الأكثر إعلاناً، بل هو العقار الذي يتوافق بشكل أفضل مع أهداف العميل وظروفه الفعلية.">
+          For buyers and investors, understanding these differences is important. The right property is not necessarily the most expensive or the most heavily promoted. It is the property that best matches the client's actual objectives and circumstances.
+        </p>
 
-  <footer>
-    © <span id="year"></span> AMR BEIRUTI · DUBAI REAL ESTATE
-  </footer>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+  <section class="section contact-section" id="contact">
+    <div class="container">
 
-    const languageButton = document.getElementById("languageButton");
-    let currentLanguage = "en";
+      <div class="contact-content">
 
-    languageButton.addEventListener("click", function () {
-      currentLanguage = currentLanguage === "en" ? "ar" : "en";
+        <div class="eyebrow" data-en="Let's Connect" data-ar="لنتواصل">
+          Let's Connect
+        </div>
 
-      document.documentElement.lang = currentLanguage;
-      document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+        <h2
+          data-en="Looking for Property in <span class='gold'>Dubai?</span>"
+          data-ar="هل تبحث عن عقار في <span class='gold'>دبي؟</span>">
+          Looking for Property in <span class="gold">Dubai?</span>
+        </h2>
 
-      document.querySelectorAll("[data-en]").forEach(function (element) {
-        element.textContent = element.getAttribute("data-" + currentLanguage);
-      });
+        <p
+          data-en="Whether you are considering buying a home, exploring investment opportunities or simply trying to understand the market, I would be pleased to discuss your requirements."
+          data-ar="سواء كنت تفكر في شراء منزل أو استكشاف فرص استثمارية أو ترغب فقط في فهم السوق، يسعدني مناقشة احتياجاتك معك.">
+          Whether you are considering buying a home, exploring investment opportunities or simply trying to understand the market, I would be pleased to discuss your requirements.
+        </p>
 
-      document.querySelector(".english-story").hidden = currentLanguage !== "en";
-      document.querySelector(".arabic-story").hidden = currentLanguage !== "ar";
+        <div class="button-row">
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/971585446444"
+            target="_blank"
+            rel="noopener"
+            data-en="Contact Me on WhatsApp"
+            data-ar="تواصل معي عبر واتساب">
+            Contact Me on WhatsApp
+          </a>
 
-      languageButton.textContent = currentLanguage === "en" ? "العربية" : "English";
+          <a
+            class="btn btn-outline"
+            href="mailto:Amrbeiruti@gmail.com"
+            data-en="Send an Email"
+            data-ar="أرسل بريداً إلكترونياً">
+            Send an Email
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="https://ae.linkedin.com/in/amr-beiruti-81543a276"
+            target="_blank"
+            rel="noopener"
+            data-en="LinkedIn Profile"
+            data-ar="حساب لينكدإن">
+            LinkedIn Profile
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>Amr Beiruti</strong> |
+    <span data-en="Dubai Real Estate | Sales Director" data-ar="عقارات دبي | مدير مبيعات">
+      Dubai Real Estate | Sales Director
+    </span>
+    <p>
+      © <span id="year"></span> Amr Beiruti.
+      <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">
+        All rights reserved.
+      </span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  let currentLanguage = "en";
+
+  function toggleLanguage() {
+    currentLanguage = currentLanguage === "en" ? "ar" : "en";
+
+    document.body.classList.toggle(
+      "arabic",
+      currentLanguage === "ar"
+    );
+
+    document.documentElement.lang = currentLanguage;
+
+    document.documentElement.dir =
+      currentLanguage === "ar" ? "rtl" : "ltr";
+
+    document.querySelectorAll("[data-en][data-ar]").forEach(element => {
+      element.innerHTML = element.dataset[currentLanguage];
     });
-  </script>
+
+    document.getElementById("languageToggle").textContent =
+      currentLanguage === "en" ? "العربية" : "English";
+  }
+
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("open");
+  }
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("navLinks").classList.remove("open");
+    });
+  });
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
 
 </body>
 </html>
