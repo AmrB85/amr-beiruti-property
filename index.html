@@ -1,547 +1,1103 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Amr Beiruti | Dubai Real Estate Investment & Advisory</title>
-<meta name="description" content="Dubai real estate guidance, off-plan opportunities, investment analysis and buyer advisory from Amr Beiruti.">
-<meta name="theme-color" content="#0a111b">
-<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amr Beiruti | Dubai Real Estate Sales Director & Property Advisor</title>
+<meta name="description" content="Discover Dubai real estate with Amr Beiruti, Sales Director with over 6 years of experience in Dubai property sales, investment opportunities, buying and post-sales services.">
+<meta name="keywords" content="Dubai real estate, Dubai properties, Dubai property investment, buy property Dubai, Dubai apartments, off-plan properties Dubai, Amr Beiruti">
+<meta name="author" content="Amr Beiruti">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://amrb85.github.io/amr-beiruti-property/">
 
-<!-- GOOGLE SEARCH CONSOLE VERIFICATION - KEEP EXACTLY AS PROVIDED -->
-<meta name="google-site-verification" content="ZVhR4pgDYsdGLg8ip8xC6fGrrKExQWWif1se7R45MpA">
+<meta name="google-site-verification" content="ZVhR4pgDYsdGLg8ip8xC6fGrrKExQWWif1se7R45MpA" />
 
-<meta property="og:type" content="website">
 <meta property="og:title" content="Amr Beiruti | Dubai Real Estate">
-<meta property="og:description" content="Luxury property guidance and investment advisory in Dubai.">
+<meta property="og:description" content="Independent Dubai real estate professional helping buyers and investors navigate the Dubai property market.">
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://amrb85.github.io/amr-beiruti-property/">
-<meta property="og:image" content="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1400&q=85">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --navy:#09121e;
-  --navy2:#101e2d;
-  --panel:#142638;
-  --gold:#c9a66b;
-  --gold2:#ead5ad;
-  --cream:#f4f0e8;
-  --white:#fff;
-  --muted:#aab6c3;
-  --line:rgba(201,166,107,.22);
-  --max:1200px;
+  --navy: #071522;
+  --navy-light: #102438;
+  --gold: #c9a45c;
+  --gold-light: #e2c98e;
+  --white: #f7f7f4;
+  --muted: #aab5bf;
+  --panel: #102131;
+  --border: rgba(201,164,92,.25);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{background:var(--navy);color:var(--white);font-family:"DM Sans",sans-serif;line-height:1.7;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-img{max-width:100%;display:block}
-.container{width:min(var(--max),calc(100% - 44px));margin:auto}
-h1,h2,h3,.serif{font-family:"Playfair Display",serif;font-weight:600;line-height:1.2}
-h1{font-size:clamp(46px,7vw,84px)}
-h2{font-size:clamp(30px,4vw,46px);margin-bottom:18px}
-h3{font-size:23px}
-p{color:var(--muted)}
-.gold{color:var(--gold2)}
-.eyebrow{color:var(--gold);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:15px}
-.section{padding:100px 0;border-bottom:1px solid rgba(255,255,255,.07)}
-.section-intro{max-width:700px;margin-bottom:38px}
-.section-intro p{font-size:15px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 23px;min-height:48px;border:1px solid var(--gold);font-size:12px;font-weight:700;letter-spacing:.5px;transition:.25s}
-.btn-primary{background:var(--gold);color:#101722}
-.btn-primary:hover{background:var(--gold2);transform:translateY(-2px)}
-.btn-outline{color:var(--gold2);background:transparent}
-.btn-outline:hover{background:rgba(201,166,107,.12)}
-.gold-rule{width:65px;height:2px;background:var(--gold);margin:24px 0}
-.topbar{position:sticky;top:0;z-index:1000;background:rgba(7,15,25,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{font-family:"Playfair Display",serif;font-size:21px;letter-spacing:2px;white-space:nowrap}
-.brand span{color:var(--gold)}
-.nav-links{display:flex;gap:22px;align-items:center}
-.nav-links a{font-size:11px;color:#d0d6dd;transition:.2s}
-.nav-links a:hover{color:var(--gold2)}
-.nav-actions{display:flex;align-items:center;gap:10px}
-.language-btn,.menu-btn{background:transparent;border:1px solid var(--line);color:var(--gold2);padding:9px 12px;font-size:12px}
-.menu-btn{display:none;color:white;font-size:18px}
-.hero{min-height:690px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(5,12,21,.94),rgba(5,12,21,.65) 55%,rgba(5,12,21,.2)),url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2200&q=90") center 48%/cover no-repeat}
-.hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--navy));pointer-events:none}
-.hero-content{position:relative;z-index:1;max-width:780px;padding:100px 0}
-.hero h1{max-width:850px;text-shadow:0 4px 25px #0008}
-.hero-role{color:var(--gold2);letter-spacing:1.5px;font-size:14px;margin:22px 0}
-.hero-copy{max-width:630px;color:#e0e5eb;font-size:16px;margin-bottom:30px}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:12px}
-.hero-meta{display:flex;gap:35px;flex-wrap:wrap;margin-top:55px}
-.hero-meta strong{display:block;color:white;font-size:19px}
-.hero-meta span{font-size:11px;color:#d0d6dd}
-.hero-meta div{border-left:2px solid var(--gold);padding-left:13px}
-.trust-strip{background:#101e2b;border-block:1px solid var(--line)}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.trust-item{text-align:center;padding:23px 10px;border-right:1px solid var(--line);font-size:12px;color:var(--gold2);font-weight:600}
-.trust-item:last-child{border:0}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
-.editorial-image{min-height:440px;background:url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1300&q=85") center/cover;border:1px solid var(--line);position:relative}
-.editorial-image:after{content:"DUBAI · UNITED ARAB EMIRATES";position:absolute;bottom:18px;left:18px;font-size:10px;letter-spacing:2px;color:white;background:#07111dcc;padding:10px 14px}
-.copy p{margin:0 0 17px;font-size:14px}
-.copy .btn{margin-top:12px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:35px}
-.stat{padding:27px;background:var(--panel);border:1px solid var(--line)}
-.stat strong{display:block;font-family:"Playfair Display",serif;color:var(--gold2);font-size:30px}
-.stat span{font-size:11px;color:var(--muted)}
-.note{font-size:10px;color:#8e9baa;margin-top:15px}
-.image-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.image-card{position:relative;min-height:290px;overflow:hidden;border:1px solid var(--line);background:#152638}
-.image-card img{width:100%;height:100%;min-height:290px;object-fit:cover;position:absolute;inset:0;transition:transform .6s}
-.image-card:hover img{transform:scale(1.06)}
-.image-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,9,16,.94),transparent 70%)}
-.image-card-content{position:absolute;z-index:1;bottom:22px;left:22px;right:22px}
-.image-card h3{font-size:24px;margin-bottom:6px}
-.image-card p{font-size:12px;color:#e0e5eb}
-.area-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}
-.area-tabs,.market-tabs{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:22px}
-.tab-btn{border:1px solid var(--line);background:transparent;color:#cbd4de;padding:11px 15px;font-size:11px;transition:.2s}
-.tab-btn.active,.tab-btn:hover{background:var(--gold);color:#111a24;border-color:var(--gold)}
-.area-info{background:var(--panel);border:1px solid var(--line);padding:28px;min-height:260px}
-.area-info h3{color:var(--gold2);font-size:27px;margin-bottom:12px}
-.area-info p{font-size:13px;margin-bottom:12px}
-.area-info .area-tag{display:inline-block;border:1px solid var(--line);padding:6px 10px;font-size:10px;color:var(--gold2);margin:5px 5px 0 0}
-#areaMap{height:440px;width:100%;border:1px solid var(--line);z-index:1}
-.leaflet-container{background:#142638}
-.market-panel{background:linear-gradient(140deg,#142638,#0e1a28);border:1px solid var(--line);padding:34px;min-height:260px}
-.market-panel h3{color:var(--gold2);margin-bottom:15px}
-.market-panel p{font-size:14px;margin-bottom:13px}
-.market-panel ul{padding-left:20px;color:#c0cad5;font-size:13px}
-.market-panel li{margin:8px 0}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.service{padding:27px;background:linear-gradient(145deg,#172a3c,#101c29);border:1px solid var(--line);min-height:190px;transition:.25s}
-.service:hover{transform:translateY(-5px);border-color:var(--gold)}
-.service .number{font-family:"Playfair Display",serif;color:var(--gold);font-size:27px;margin-bottom:18px}
-.service h3{font-size:20px;margin-bottom:10px}
-.service p{font-size:12px}
-.buyer-wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:45px;align-items:start}
-.buyer-aside{position:sticky;top:110px}
-.buyer-aside p{font-size:14px;margin-top:15px}
-.buyer-form{background:linear-gradient(145deg,#172a3c,#101a27);border:1px solid var(--line);padding:32px}
-.progress{height:4px;background:#334354;margin-bottom:28px}
-.progress-fill{height:100%;width:10%;background:var(--gold);transition:.25s}
-.step-counter{font-size:10px;letter-spacing:2px;color:var(--gold);margin-bottom:13px}
-.question-title{font-family:"Playfair Display",serif;font-size:25px;margin-bottom:22px}
-.option-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.option{display:flex;align-items:center;gap:10px;padding:13px;border:1px solid rgba(255,255,255,.12);font-size:12px;color:#e1e6eb;cursor:pointer}
-.option:has(input:checked){border-color:var(--gold);background:rgba(201,166,107,.1)}
-.option input{accent-color:var(--gold)}
-.form-field{margin:15px 0}
-.form-field label{display:block;font-size:11px;color:var(--gold2);margin-bottom:7px}
-.form-field input,.form-field textarea{width:100%;padding:13px;background:#0b1724;border:1px solid #344354;color:white;outline:none}
-.form-field textarea{min-height:90px;resize:vertical}
-.form-field input:focus,.form-field textarea:focus{border-color:var(--gold)}
-.form-error{color:#ffaaa0;font-size:12px;min-height:22px;margin-top:10px}
-.form-controls{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
-.faq-list{max-width:850px}
-details{border-bottom:1px solid var(--line);padding:19px 0}
-summary{cursor:pointer;font-family:"Playfair Display",serif;font-size:18px;color:#f4eee2}
-details p{font-size:13px;padding-top:13px}
-.contact-band{background:linear-gradient(90deg,rgba(7,15,25,.94),rgba(7,15,25,.78)),url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=85") center/cover;padding:85px 0;text-align:center}
-.contact-band p{max-width:650px;margin:15px auto 25px}
-.footer{background:#060c13;padding:38px 0;border-top:1px solid var(--line)}
-.footer-row{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
-.footer p{font-size:11px;margin-top:8px}
-.footer a{color:var(--gold2)}
-.mobile-bar{display:none}
-[hidden]{display:none!important}
-[dir="rtl"] body{text-align:right}
-[dir="rtl"] .hero-content{text-align:right}
-[dir="rtl"] .hero-meta div{border-left:0;border-right:2px solid var(--gold);padding-left:0;padding-right:13px}
-[dir="rtl"] .editorial-image:after{left:auto;right:18px}
-[dir="rtl"] .image-card-content{left:22px;right:22px}
-[dir="rtl"] .area-info .area-tag{margin:5px 0 0 5px}
-[dir="rtl"] .market-panel ul{padding-left:0;padding-right:20px}
-[dir="rtl"] .buyer-aside{text-align:right}
-[dir="rtl"] .form-controls{flex-direction:row-reverse}
-@media(max-width:900px){
- .nav-links{display:none;position:absolute;top:78px;left:0;right:0;background:#0a1421;padding:22px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}
- .nav-links.open{display:flex}
- .menu-btn{display:block}
- .split,.area-layout,.buyer-wrap{grid-template-columns:1fr}
- .buyer-aside{position:static}
- .services-grid{grid-template-columns:repeat(2,1fr)}
- .image-grid{grid-template-columns:repeat(2,1fr)}
- .hero{min-height:620px}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@media(max-width:600px){
- .container{width:calc(100% - 32px)}
- .nav{height:68px}
- .brand{font-size:17px}
- .nav-links{top:68px}
- .hero{min-height:650px;background-position:58% center}
- .hero-content{padding:80px 0}
- .hero h1{font-size:49px}
- .hero-copy{font-size:14px}
- .hero-meta{gap:18px;margin-top:38px}
- .hero-meta strong{font-size:16px}
- .trust-grid{grid-template-columns:repeat(2,1fr)}
- .trust-item{border-bottom:1px solid var(--line)}
- .section{padding:72px 0}
- .split{gap:30px}
- .editorial-image{min-height:300px}
- .stats{grid-template-columns:1fr}
- .image-grid,.services-grid{grid-template-columns:1fr}
- .image-card,.image-card img{min-height:260px}
- .area-layout{gap:15px}
- #areaMap{height:330px}
- .area-tabs,.market-tabs{gap:7px}
- .tab-btn{padding:10px;font-size:10px}
- .buyer-form{padding:22px}
- .option-list{grid-template-columns:1fr}
- .question-title{font-size:22px}
- .mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#07111e;border-top:1px solid var(--line);padding:10px 12px;gap:10px}
- .mobile-bar .btn{flex:1;padding:11px 8px;font-size:10px}
- body{padding-bottom:65px}
- .footer-row{display:block}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.7;
+}
+
+body.arabic {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7,21,34,.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  list-style: none;
+  font-size: 13px;
+  color: #d5dce2;
+}
+
+.nav-links a:hover {
+  color: var(--gold-light);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.language-button {
+  border: 1px solid var(--border);
+  color: var(--gold-light);
+  background: transparent;
+  padding: 9px 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-button {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.hero {
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(7,21,34,.98) 0%, rgba(7,21,34,.86) 48%, rgba(7,21,34,.25) 100%),
+    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85') center/cover;
+}
+
+.hero-content {
+  max-width: 720px;
+  padding: 100px 0;
+}
+
+.eyebrow {
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  line-height: 1.12;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: var(--gold-light);
+}
+
+.hero p {
+  max-width: 610px;
+  color: #d1d9df;
+  font-size: 17px;
+  margin-bottom: 35px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 23px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 13px;
+  transition: .25s;
+  cursor: pointer;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #081522;
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+}
+
+.btn-outline:hover {
+  background: rgba(201,164,92,.12);
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 48px;
+}
+
+.section-heading.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  font-size: clamp(29px, 4vw, 43px);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.gold {
+  color: var(--gold-light);
+}
+
+.stats {
+  background: #0b1b2a;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  color: var(--gold-light);
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.portrait-placeholder {
+  min-height: 440px;
+  background:
+    linear-gradient(145deg, rgba(201,164,92,.12), rgba(16,36,56,.8)),
+    url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=80') center/cover;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: end;
+  padding: 25px;
+}
+
+.portrait-label {
+  background: rgba(7,21,34,.9);
+  border-left: 3px solid var(--gold);
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.portrait-label strong {
+  display: block;
+  color: var(--gold-light);
+}
+
+.portrait-label span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.feature {
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 5px;
+  color: #e7e9e9;
+  font-size: 13px;
+}
+
+.feature::before {
+  content: "✦";
+  color: var(--gold);
+  margin-right: 9px;
+}
+
+body.arabic .feature::before {
+  margin-right: 0;
+  margin-left: 9px;
+}
+
+.dark-section {
+  background: #0b1b2a;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 30px 25px;
+  min-height: 235px;
+  transition: .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.card-icon {
+  color: var(--gold-light);
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.area-card {
+  min-height: 270px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: end;
+  background-size: cover;
+  background-position: center;
+}
+
+.area-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(4,13,22,.95));
+}
+
+.area-content {
+  position: relative;
+  padding: 23px;
+}
+
+.area-content h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.area-content p {
+  color: #d0d7dc;
+  font-size: 12px;
+}
+
+.market-panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 35px;
+  border-radius: 8px;
+}
+
+.market-panel p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.faq-list {
+  max-width: 850px;
+  margin: auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  color: var(--white);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+body.arabic .faq-question {
+  text-align: right;
+}
+
+.faq-answer {
+  display: none;
+  color: var(--muted);
+  font-size: 14px;
+  padding-top: 15px;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.contact-section {
+  background:
+    linear-gradient(rgba(7,21,34,.94), rgba(7,21,34,.96)),
+    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1800&q=80') center/cover;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-copy p {
+  color: var(--muted);
+  margin: 15px 0 25px;
+}
+
+.contact-form {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background: #081725;
+  border: 1px solid rgba(255,255,255,.12);
+  color: white;
+  border-radius: 4px;
+  padding: 13px;
+  margin-bottom: 13px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--gold);
+}
+
+.contact-form textarea {
+  min-height: 105px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  border: 0;
+}
+
+footer {
+  padding: 35px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+footer strong {
+  color: var(--gold-light);
+}
+
+@media(max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    right: 0;
+    padding: 25px 5%;
+    background: var(--navy);
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid,
+  .area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    min-height: 580px;
+    background-position: 60% center;
+  }
+}
+
+@media(max-width: 600px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .cards-grid,
+  .area-grid,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    gap: 20px;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 80px 0;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .navbar {
+    min-height: 72px;
+  }
+
+  .nav-links {
+    top: 72px;
+  }
 }
 </style>
 </head>
-
 <body>
-<header class="topbar">
- <div class="container nav">
-  <a class="brand" href="#home">AMR <span>BEIRUTI</span></a>
-  <nav class="nav-links" id="navLinks">
-   <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
-   <a href="#about" data-en="About" data-ar="عنّي">About</a>
-   <a href="#areas" data-en="Areas" data-ar="المناطق">Areas</a>
-   <a href="#intelligence" data-en="Insights" data-ar="تحليل السوق">Insights</a>
-   <a href="#services" data-en="Services" data-ar="الخدمات">Services</a>
-   <a href="#qualify" data-en="Buyer Brief" data-ar="طلب عقاري">Buyer Brief</a>
-  </nav>
-  <div class="nav-actions">
-   <button class="language-btn" id="languageToggle" type="button">العربية</button>
-   <button class="menu-btn" id="menuToggle" type="button" aria-label="Open menu">☰</button>
+
+<header>
+  <div class="container navbar">
+    <a href="#home" class="logo">AMR <span>BEIRUTI</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="#about" data-en="About" data-ar="نبذة عني">About</a></li>
+      <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+      <li><a href="#areas" data-en="Areas" data-ar="المناطق">Areas</a></li>
+      <li><a href="#market" data-en="Market Insights" data-ar="تحليلات السوق">Market Insights</a></li>
+      <li><a href="#contact" data-en="Contact" data-ar="تواصل معي">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="language-button" id="languageToggle" onclick="toggleLanguage()">العربية</button>
+      <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation">☰</button>
+    </div>
   </div>
- </div>
 </header>
 
 <main>
 <section class="hero" id="home">
- <div class="container">
-  <div class="hero-content">
-   <div class="eyebrow" data-en="Dubai Real Estate · Since 2021" data-ar="عقارات دبي · منذ 2021">Dubai Real Estate · Since 2021</div>
-   <h1>AMR <span class="gold">BEIRUTI</span></h1>
-   <div class="hero-role" data-en="Sales Director · Dubai Real Estate" data-ar="مدير مبيعات · عقارات دبي">Sales Director · Dubai Real Estate</div>
-   <p class="hero-copy" data-en="A considered approach to Dubai property. Market understanding, clear advice and tailored guidance for buyers and investors." data-ar="نهج مدروس في سوق العقارات بدبي. فهم للسوق ونصيحة واضحة وتوجيه يناسب المشترين والمستثمرين.">A considered approach to Dubai property. Market understanding, clear advice and tailored guidance for buyers and investors.</p>
-   <div class="hero-buttons">
-    <a class="btn btn-primary" href="#qualify" data-en="Prepare Your Buyer Brief" data-ar="جهّز طلبك العقاري">Prepare Your Buyer Brief</a>
-    <a class="btn btn-outline" href="https://wa.me/971585446444" target="_blank" rel="noopener" data-en="Contact on WhatsApp" data-ar="تواصل عبر واتساب">Contact on WhatsApp</a>
-   </div>
-   <div class="hero-meta">
-    <div><strong>2021</strong><span data-en="Dubai market experience" data-ar="في سوق دبي">Dubai market experience</span></div>
-    <div><strong>360°</strong><span data-en="Buyer journey support" data-ar="متابعة رحلة المشتري">Buyer journey support</span></div>
-    <div><strong>EN / AR</strong><span data-en="English and Arabic" data-ar="الإنجليزية والعربية">English and Arabic</span></div>
-   </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow" data-en="Dubai Real Estate | Sales Director" data-ar="العقارات في دبي | مدير مبيعات">Dubai Real Estate | Sales Director</div>
+
+      <h1 data-en="Navigate Dubai Real Estate With <span>Confidence.</span>" data-ar="اكتشف عقارات دبي واستثمر <span>بثقة.</span>">
+        Navigate Dubai Real Estate With <span>Confidence.</span>
+      </h1>
+
+      <p data-en="Strategic property guidance for buyers and investors in Dubai. From identifying the right opportunity to supporting you beyond the purchase." data-ar="أقدّم للمشترين والمستثمرين توجيهاً عقارياً مدروساً في دبي، من اختيار الفرصة المناسبة وحتى خدمات المتابعة والدعم بعد الشراء.">
+        Strategic property guidance for buyers and investors in Dubai. From identifying the right opportunity to supporting you beyond the purchase.
+      </p>
+
+      <div class="button-row">
+        <a class="btn btn-gold" href="https://wa.me/971585446444" target="_blank" rel="noopener" data-en="Discuss Your Property Goals" data-ar="ناقش أهدافك العقارية">Discuss Your Property Goals</a>
+        <a class="btn btn-outline" href="#services" data-en="Explore Services" data-ar="اكتشف الخدمات">Explore Services</a>
+      </div>
+    </div>
   </div>
- </div>
 </section>
 
-<div class="trust-strip">
- <div class="container trust-grid">
-  <div class="trust-item" data-en="Off-plan developments" data-ar="المشاريع قيد الإنشاء">Off-plan developments</div>
-  <div class="trust-item" data-en="Property investment" data-ar="الاستثمار العقاري">Property investment</div>
-  <div class="trust-item" data-en="Location comparison" data-ar="مقارنة المناطق">Location comparison</div>
-  <div class="trust-item" data-en="Buyer guidance" data-ar="توجيه المشترين">Buyer guidance</div>
- </div>
-</div>
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat">
+      <strong>6+</strong>
+      <span data-en="Years of Experience" data-ar="سنوات من الخبرة">Years of Experience</span>
+    </div>
+    <div class="stat">
+      <strong>Dubai</strong>
+      <span data-en="Market-Wide Coverage" data-ar="تغطية شاملة لسوق دبي">Market-Wide Coverage</span>
+    </div>
+    <div class="stat">
+      <strong>Buyers & Investors</strong>
+      <span data-en="Client Focus" data-ar="العملاء المستهدفون">Client Focus</span>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="about">
- <div class="container split">
-  <div class="editorial-image" role="img" aria-label="Dubai skyline"></div>
-  <div class="copy">
-   <div class="eyebrow" data-en="A Personal Approach" data-ar="نهج شخصي">A Personal Approach</div>
-   <h2 data-en="Property decisions deserve a wider perspective." data-ar="القرارات العقارية بتحتاج نظرة أشمل.">Property decisions deserve a wider perspective.</h2>
-   <p data-en="Since 2021, I have worked in Dubai real estate, focusing on off-plan developments, property investment and helping buyers understand opportunities across the city." data-ar="منذ عام 2021 أعمل في سوق العقارات بدبي، مع تركيز على المشاريع قيد الإنشاء والاستثمار العقاري ومساعدة المشترين على فهم الفرص بمختلف مناطق المدينة.">Since 2021, I have worked in Dubai real estate, focusing on off-plan developments, property investment and helping buyers understand opportunities across the city.</p>
-   <p data-en="My approach goes beyond presenting properties. It involves understanding objectives, comparing locations and developers, reviewing payment structures and explaining the details that matter." data-ar="عملي ما بيقتصر على عرض العقارات، بل يشمل فهم الأهداف ومقارنة المناطق والمطورين ودراسة خطط الدفع وشرح التفاصيل المهمة.">My approach goes beyond presenting properties. It involves understanding objectives, comparing locations and developers, reviewing payment structures and explaining the details that matter.</p>
-   <p data-en="Clear communication, realistic expectations and consistent follow-up are central to the way I work." data-ar="التواصل الواضح والتوقعات الواقعية والمتابعة المستمرة هي أساس طريقة عملي.">Clear communication, realistic expectations and consistent follow-up are central to the way I work.</p>
-   <a class="btn btn-outline" href="about.html" data-en="Discover More About Me" data-ar="اعرف المزيد عنّي">Discover More About Me</a>
+  <div class="container about-grid">
+    <div class="portrait-placeholder">
+      <div class="portrait-label">
+        <strong>Amr Beiruti</strong>
+        <span data-en="Sales Director | Dubai Real Estate" data-ar="مدير مبيعات | عقارات دبي">Sales Director | Dubai Real Estate</span>
+      </div>
+    </div>
+
+    <div class="about-copy">
+      <div class="section-heading">
+        <div class="eyebrow" data-en="About Me" data-ar="نبذة عني">About Me</div>
+        <h2 data-en="A More Informed Approach to <span class='gold'>Dubai Property.</span>" data-ar="رؤية أوضح لاتخاذ قرارات <span class='gold'>عقارية في دبي.</span>">
+          A More Informed Approach to <span class="gold">Dubai Property.</span>
+        </h2>
+      </div>
+
+      <p data-en="I am Amr Beiruti, a Dubai real estate professional and Sales Director with more than six years of experience in the property market." data-ar="أنا عمرو بيروتي، أعمل في مجال العقارات في دبي بصفة مدير مبيعات، ولدي أكثر من ست سنوات من الخبرة في السوق العقاري.">
+        I am Amr Beiruti, a Dubai real estate professional and Sales Director with more than six years of experience in the property market.
+      </p>
+
+      <p data-en="My work focuses on helping buyers and investors understand the market, compare opportunities and make decisions based on their objectives, budget and investment horizon." data-ar="أركّز في عملي على مساعدة المشترين والمستثمرين على فهم السوق ومقارنة الفرص واتخاذ قرارات تتناسب مع أهدافهم وميزانيتهم وخططهم الاستثمارية.">
+        My work focuses on helping buyers and investors understand the market, compare opportunities and make decisions based on their objectives, budget and investment horizon.
+      </p>
+
+      <p data-en="Dubai offers a diverse property landscape, from established residential communities to emerging investment destinations. My approach is built around clear communication, market knowledge and ongoing client support." data-ar="يتميّز سوق دبي بتنوّع كبير، من المجتمعات السكنية الراسخة إلى الوجهات الاستثمارية الجديدة. أعتمد في عملي على التواصل الواضح ومعرفة السوق ومتابعة العميل بشكل مستمر.">
+        Dubai offers a diverse property landscape, from established residential communities to emerging investment destinations. My approach is built around clear communication, market knowledge and ongoing client support.
+      </p>
+
+      <div class="feature-list">
+        <div class="feature" data-en="6+ Years of Market Experience" data-ar="أكثر من 6 سنوات خبرة">6+ Years of Market Experience</div>
+        <div class="feature" data-en="Buyer & Investor Guidance" data-ar="توجيه المشترين والمستثمرين">Buyer & Investor Guidance</div>
+        <div class="feature" data-en="Dubai-Wide Property Knowledge" data-ar="معرفة بمختلف مناطق دبي">Dubai-Wide Property Knowledge</div>
+        <div class="feature" data-en="Post-Purchase Support" data-ar="متابعة ما بعد الشراء">Post-Purchase Support</div>
+      </div>
+
+      <a class="btn btn-gold" href="about.html" data-en="Read More About Me" data-ar="اقرأ المزيد عني">Read More About Me</a>
+    </div>
   </div>
- </div>
 </section>
 
-<section class="section" id="dubai">
- <div class="container">
-  <div class="section-intro">
-   <div class="eyebrow" data-en="The Dubai Market" data-ar="سوق دبي">The Dubai Market</div>
-   <h2 data-en="A global property destination." data-ar="وجهة عقارية عالمية.">A global property destination.</h2>
-   <p data-en="Dubai attracts international buyers through its range of communities, infrastructure and property options. Market figures should always be considered in context and checked against current reports." data-ar="تجذب دبي المشترين من مختلف أنحاء العالم بفضل تنوع مناطقها وبنيتها التحتية وخياراتها العقارية. ومن المهم دائماً قراءة أرقام السوق ضمن سياقها ومراجعة التقارير الحديثة.">Dubai attracts international buyers through its range of communities, infrastructure and property options. Market figures should always be considered in context and checked against current reports.</p>
+<section class="section dark-section" id="services">
+  <div class="container">
+    <div class="section-heading center">
+      <div class="eyebrow" data-en="What I Do" data-ar="ماذا أقدّم">What I Do</div>
+      <h2 data-en="Real Estate Services Built Around <span class='gold'>Your Goals.</span>" data-ar="خدمات عقارية مصممة بما يتناسب مع <span class='gold'>أهدافك.</span>">
+        Real Estate Services Built Around <span class="gold">Your Goals.</span>
+      </h2>
+      <p data-en="Practical guidance throughout the property journey, from the first conversation to the steps that follow completion." data-ar="مرافقة عملية خلال رحلتك العقارية، من أول تواصل وحتى الخطوات التي تلي إتمام عملية الشراء.">
+        Practical guidance throughout the property journey, from the first conversation to the steps that follow completion.
+      </p>
+    </div>
+
+    <div class="cards-grid" id="servicesGrid"></div>
   </div>
-  <div class="stats">
-   <div class="stat"><strong>AED 917bn</strong><span>2025 total transaction value</span></div>
-   <div class="stat"><strong>270k+</strong><span>2025 property transactions</span></div>
-   <div class="stat"><strong>AED 544.2bn</strong><span>2025 residential sales value</span></div>
-  </div>
-  <p class="note">Historical 2025 figures previously referenced from Knight Frank market reporting. Verify against the original report before relying on them for investment decisions. Figures are not a forecast or guarantee.</p>
- </div>
 </section>
 
 <section class="section" id="areas">
- <div class="container">
-  <div class="section-intro">
-   <div class="eyebrow" data-en="Explore Dubai" data-ar="اكتشف دبي">Explore Dubai</div>
-   <h2 data-en="Five areas. Different ways to live and invest." data-ar="خمس مناطق. أنماط مختلفة للسكن والاستثمار.">Five areas. Different ways to live and invest.</h2>
-   <p data-en="Explore the character of selected Dubai communities. Compare location, lifestyle and the type of buyer each area may suit." data-ar="اكتشف طبيعة بعض مناطق دبي وقارن الموقع ونمط الحياة ونوعية المشتري اللي ممكن تناسبه كل منطقة.">Explore the character of selected Dubai communities. Compare location, lifestyle and the type of buyer each area may suit.</p>
-  </div>
-  <div class="image-grid">
-   <article class="image-card"><img loading="lazy" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80" alt="Dubai skyline"><div class="image-card-content"><h3>Dubai Marina</h3><p>Waterfront living · Dining · Urban lifestyle</p></div></article>
-   <article class="image-card"><img loading="lazy" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=80" alt="Dubai towers"><div class="image-card-content"><h3>Business Bay</h3><p>Central location · Business · City living</p></div></article>
-   <article class="image-card"><img loading="lazy" src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=900&q=80" alt="Palm Jumeirah aerial"><div class="image-card-content"><h3>Palm Jumeirah</h3><p>Waterfront homes · Resorts · Luxury</p></div></article>
-  </div>
-
-  <div style="margin-top:55px">
-   <div class="area-tabs" role="tablist" aria-label="Dubai areas">
-    <button class="tab-btn active" data-area="marina" type="button">Dubai Marina</button>
-    <button class="tab-btn" data-area="businessbay" type="button">Business Bay</button>
-    <button class="tab-btn" data-area="palm" type="button">Palm Jumeirah</button>
-    <button class="tab-btn" data-area="creek" type="button">Creek Harbour</button>
-    <button class="tab-btn" data-area="hills" type="button">Dubai Hills</button>
-   </div>
-   <div class="area-layout">
-    <div class="area-info" id="areaInfo" aria-live="polite">
-     <h3>Dubai Marina</h3>
-     <p>A waterfront community known for its marina promenade, apartment towers, restaurants and access to the beach and transport.</p>
-     <span class="area-tag">Waterfront</span><span class="area-tag">Apartments</span><span class="area-tag">Lifestyle</span>
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow" data-en="Dubai Communities" data-ar="مناطق دبي">Dubai Communities</div>
+      <h2 data-en="Explore Property Opportunities Across <span class='gold'>Dubai.</span>" data-ar="اكتشف الفرص العقارية في مختلف مناطق <span class='gold'>دبي.</span>">
+        Explore Property Opportunities Across <span class="gold">Dubai.</span>
+      </h2>
+      <p data-en="Different communities offer different lifestyles, price points and investment characteristics. Explore some of Dubai's established and emerging destinations." data-ar="تختلف مناطق دبي من حيث نمط الحياة والأسعار والفرص الاستثمارية. تعرّف على بعض الوجهات السكنية والاستثمارية الراسخة والواعدة.">
+        Different communities offer different lifestyles, price points and investment characteristics. Explore some of Dubai's established and emerging destinations.
+      </p>
     </div>
-    <div id="areaMap" aria-label="Interactive map of selected Dubai communities"></div>
-   </div>
+
+    <div class="area-grid" id="areasGrid"></div>
   </div>
- </div>
 </section>
 
-<section class="section" id="intelligence">
- <div class="container">
-  <div class="section-intro">
-   <div class="eyebrow" data-en="Market Intelligence" data-ar="تحليل السوق">Market Intelligence</div>
-   <h2 data-en="Look beyond the brochure." data-ar="شوف الصورة الكاملة.">Look beyond the brochure.</h2>
-   <p data-en="A property decision should consider more than the launch price. Explore the factors that help buyers evaluate an opportunity." data-ar="القرار العقاري لازم يعتمد على أكثر من سعر الإطلاق. تعرّف على العوامل اللي بتساعد المشتري يقيّم الفرصة.">A property decision should consider more than the launch price. Explore the factors that help buyers evaluate an opportunity.</p>
-  </div>
-  <div class="market-tabs">
-   <button class="tab-btn active" data-market="overview" type="button">Market overview</button>
-   <button class="tab-btn" data-market="investment" type="button">Investment analysis</button>
-   <button class="tab-btn" data-market="checklist" type="button">Buyer checklist</button>
-  </div>
-  <div class="market-panel" id="marketPanel" aria-live="polite">
-   <h3>Understand the market</h3>
-   <p>Dubai is not one single property market. Performance and demand can differ significantly between communities, property types, developers and price segments.</p>
-   <ul><li>Compare similar properties in the same area.</li><li>Understand current supply and upcoming projects.</li><li>Consider service charges, transaction costs and ownership expenses.</li></ul>
-  </div>
- </div>
-</section>
+<section class="section dark-section" id="market">
+  <div class="container">
+    <div class="section-heading center">
+      <div class="eyebrow" data-en="Market Perspective" data-ar="رؤية حول السوق">Market Perspective</div>
+      <h2 data-en="Understand the Market Before You <span class='gold'>Decide.</span>" data-ar="افهم السوق قبل أن <span class='gold'>تتخذ قرارك.</span>">
+        Understand the Market Before You <span class="gold">Decide.</span>
+      </h2>
+      <p data-en="A property decision should consider more than the asking price. Location, supply, demand, service charges, rental potential and exit strategy all matter." data-ar="القرار العقاري لا يعتمد على سعر العقار فقط، بل يشمل الموقع والعرض والطلب ورسوم الخدمات والعائد الإيجاري وخطة إعادة البيع.">
+        A property decision should consider more than the asking price. Location, supply, demand, service charges, rental potential and exit strategy all matter.
+      </p>
+    </div>
 
-<section class="section" id="services">
- <div class="container">
-  <div class="section-intro">
-   <div class="eyebrow" data-en="Advisory Services" data-ar="الخدمات والاستشارات">Advisory Services</div>
-   <h2 data-en="Support built around your objective." data-ar="دعم مبني على هدفك.">Support built around your objective.</h2>
-   <p data-en="Whether you are buying a home, exploring an off-plan launch or reviewing an investment, the starting point is understanding what you need." data-ar="سواء كنت عم تشتري منزل أو تستكشف مشروع قيد الإنشاء أو تدرس استثمار، البداية هي فهم احتياجك.">Whether you are buying a home, exploring an off-plan launch or reviewing an investment, the starting point is understanding what you need.</p>
+    <div class="market-panel">
+      <h3 class="gold" data-en="A Considered Property Decision" data-ar="قرار عقاري مدروس">A Considered Property Decision</h3>
+      <p data-en="Whether you are purchasing a home or evaluating an investment, it is important to understand the specific property, its community and the assumptions behind its projected performance. Market conditions change, and investment outcomes are never guaranteed." data-ar="سواء كنت تشتري منزلاً أو تدرس فرصة استثمارية، من المهم فهم العقار نفسه والمنطقة والافتراضات التي بُنيت عليها التوقعات. ظروف السوق تتغير، ولا يمكن ضمان نتائج الاستثمار.">
+        Whether you are purchasing a home or evaluating an investment, it is important to understand the specific property, its community and the assumptions behind its projected performance. Market conditions change, and investment outcomes are never guaranteed.
+      </p>
+    </div>
   </div>
-  <div class="services-grid">
-   <article class="service"><div class="number">01</div><h3>Residential Property</h3><p>Explore homes and communities aligned with your lifestyle, priorities and budget.</p></article>
-   <article class="service"><div class="number">02</div><h3>Off-plan Developments</h3><p>Review project details, developer background, payment plans and delivery considerations.</p></article>
-   <article class="service"><div class="number">03</div><h3>Luxury Property</h3><p>Explore premium homes and locations with attention to quality, positioning and ownership costs.</p></article>
-   <article class="service"><div class="number">04</div><h3>Investment Analysis</h3><p>Consider rental demand, costs, potential returns, liquidity and long-term objectives.</p></article>
-   <article class="service"><div class="number">05</div><h3>Area & Project Comparison</h3><p>Compare communities, developers, property types and payment structures.</p></article>
-   <article class="service"><div class="number">06</div><h3>Buyer Journey Support</h3><p>Guidance through selection, purchase steps, handover considerations and follow-up.</p></article>
-  </div>
- </div>
-</section>
-
-<section class="section" id="qualify">
- <div class="container buyer-wrap">
-  <div class="buyer-aside">
-   <div class="eyebrow" data-en="Your Buyer Brief" data-ar="طلبك العقاري">Your Buyer Brief</div>
-   <h2 data-en="Let's start with what matters to you." data-ar="خلينا نبدأ باللي بهمك.">Let's start with what matters to you.</h2>
-   <p data-en="Answer a few questions so I can better understand your plans. Your answers will be prepared as a WhatsApp message for you to review and send." data-ar="جاوب على كم سؤال حتى أفهم خططك بشكل أفضل. رح نجهّز إجاباتك برسالة واتساب لتراجعها وترسلها.">Answer a few questions so I can better understand your plans. Your answers will be prepared as a WhatsApp message for you to review and send.</p>
-   <div class="gold-rule"></div>
-   <p><strong class="gold">Amr Beiruti</strong><br>Sales Director · Dubai Real Estate</p>
-  </div>
-  <div class="buyer-form">
-   <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
-   <div id="questionArea"></div>
-   <div class="form-error" id="formError" aria-live="polite"></div>
-   <div class="form-controls">
-    <button class="btn btn-outline" id="backBtn" type="button">Back</button>
-    <button class="btn btn-primary" id="nextBtn" type="button">Continue</button>
-   </div>
-  </div>
- </div>
 </section>
 
 <section class="section" id="faq">
- <div class="container">
-  <div class="section-intro">
-   <div class="eyebrow">Frequently Asked Questions</div>
-   <h2>Questions worth asking.</h2>
+  <div class="container">
+    <div class="section-heading center">
+      <div class="eyebrow" data-en="Frequently Asked Questions" data-ar="الأسئلة الشائعة">Frequently Asked Questions</div>
+      <h2 data-en="Common Questions About <span class='gold'>Dubai Real Estate.</span>" data-ar="أسئلة شائعة حول <span class='gold'>عقارات دبي.</span>">
+        Common Questions About <span class="gold">Dubai Real Estate.</span>
+      </h2>
+    </div>
+
+    <div class="faq-list" id="faqList"></div>
   </div>
-  <div class="faq-list">
-   <details><summary>Is Dubai property suitable for every investor?</summary><p>No investment is suitable for everyone. The right choice depends on budget, objectives, time horizon, risk tolerance and the specific property.</p></details>
-   <details><summary>Should I buy off-plan or a ready property?</summary><p>Both options have different considerations. Off-plan purchases require careful review of the developer, construction timeline and payment terms. Ready properties allow buyers to assess the actual asset and current rental position.</p></details>
-   <details><summary>What costs should I consider beyond the purchase price?</summary><p>Consider transfer and registration fees, agency fees where applicable, mortgage costs, service charges, maintenance, furnishing and other ownership expenses.</p></details>
-   <details><summary>Can you help me compare different areas?</summary><p>Yes. Area selection should consider your budget, intended use, lifestyle priorities, access, supply and the type of property you are considering.</p></details>
-  </div>
- </div>
 </section>
 
-<section class="contact-band" id="contact">
- <div class="container">
-  <div class="eyebrow">Start a Conversation</div>
-  <h2>Make your next property decision with clarity.</h2>
-  <p>Tell me what you are looking for, and we can explore the options that make sense for your objectives.</p>
-  <div class="hero-buttons" style="justify-content:center">
-   <a class="btn btn-primary" href="#qualify">Prepare Your Buyer Brief</a>
-   <a class="btn btn-outline" href="https://wa.me/971585446444" target="_blank" rel="noopener">WhatsApp Amr</a>
+<section class="section contact-section" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <div class="eyebrow" data-en="Start a Conversation" data-ar="ابدأ التواصل">Start a Conversation</div>
+      <h2 data-en="Let's Discuss Your <span class='gold'>Property Goals.</span>" data-ar="دعنا نناقش <span class='gold'>أهدافك العقارية.</span>">
+        Let's Discuss Your <span class="gold">Property Goals.</span>
+      </h2>
+      <p data-en="Whether you're buying your first home, exploring an investment or comparing opportunities across Dubai, tell me what you're looking for." data-ar="سواء كنت تبحث عن منزلك الأول أو تدرس استثماراً عقارياً أو تقارن بين فرص مختلفة في دبي، أخبرني بما تبحث عنه.">
+        Whether you're buying your first home, exploring an investment or comparing opportunities across Dubai, tell me what you're looking for.
+      </p>
+
+      <div class="button-row">
+        <a class="btn btn-gold" href="https://wa.me/971585446444" target="_blank" rel="noopener" data-en="Chat on WhatsApp" data-ar="تواصل عبر واتساب">Chat on WhatsApp</a>
+        <a class="btn btn-outline" href="mailto:Amrbeiruti@gmail.com" data-en="Send an Email" data-ar="أرسل بريداً إلكترونياً">Send an Email</a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="leadForm">
+      <input type="text" id="leadName" placeholder="Your name" required>
+      <input type="email" id="leadEmail" placeholder="Your email address">
+      <select id="leadPurpose" required>
+        <option value="">I am interested in...</option>
+        <option value="Buying a property">Buying a property</option>
+        <option value="Property investment">Property investment</option>
+        <option value="Off-plan property">Off-plan property</option>
+        <option value="Ready property">Ready property</option>
+        <option value="Selling a property">Selling a property</option>
+        <option value="General consultation">General consultation</option>
+      </select>
+      <select id="leadTimeline">
+        <option value="">When are you planning to proceed?</option>
+        <option value="Immediately">Immediately</option>
+        <option value="Within 1 month">Within 1 month</option>
+        <option value="Within 3 months">Within 3 months</option>
+        <option value="Within 6 months">Within 6 months</option>
+        <option value="Just researching">Just researching</option>
+      </select>
+      <textarea id="leadMessage" placeholder="Tell me a little about what you are looking for"></textarea>
+      <button type="submit" class="btn btn-gold" data-en="Send Enquiry on WhatsApp" data-ar="إرسال الاستفسار عبر واتساب">Send Enquiry on WhatsApp</button>
+    </form>
   </div>
- </div>
 </section>
 </main>
 
-<footer class="footer">
- <div class="container footer-row">
-  <div><div class="brand">AMR <span>BEIRUTI</span></div><p>Sales Director · Dubai Real Estate</p><p>Dubai, United Arab Emirates</p></div>
-  <div><p><a href="mailto:Amrbeiruti@gmail.com">Amrbeiruti@gmail.com</a></p><p><a href="https://wa.me/971585446444">+971 58 544 6444</a></p><p>© <span id="currentYear"></span> Amr Beiruti. All rights reserved.</p></div>
- </div>
+<footer>
+  <div class="container">
+    <strong>Amr Beiruti</strong> |
+    <span data-en="Dubai Real Estate | Sales Director" data-ar="عقارات دبي | مدير مبيعات">Dubai Real Estate | Sales Director</span>
+    <p>© <span id="year"></span> Amr Beiruti. <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة.">All rights reserved.</span></p>
+  </div>
 </footer>
 
-<div class="mobile-bar">
- <a class="btn btn-primary" href="#qualify">Buyer Brief</a>
- <a class="btn btn-outline" href="https://wa.me/971585446444" target="_blank" rel="noopener">WhatsApp</a>
-</div>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-/* MOBILE NAVIGATION */
-document.getElementById("menuToggle").addEventListener("click",()=>{
- document.getElementById("navLinks").classList.toggle("open");
-});
-document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{
- document.getElementById("navLinks").classList.remove("open");
-}));
-
-/* LANGUAGE SWITCH */
-let currentLanguage="en";
-document.getElementById("languageToggle").addEventListener("click",()=>{
- currentLanguage=currentLanguage==="en"?"ar":"en";
- document.documentElement.lang=currentLanguage;
- document.documentElement.dir=currentLanguage==="ar"?"rtl":"ltr";
- document.querySelectorAll("[data-en][data-ar]").forEach(el=>{
-  el.textContent=el.getAttribute(currentLanguage==="ar"?"data-ar":"data-en");
- });
- document.getElementById("languageToggle").textContent=currentLanguage==="ar"?"English":"العربية";
- renderQuestion();
-});
-
-/* AREA EXPLORER */
-const areas={
- marina:{name:"Dubai Marina",lat:25.0805,lng:55.1403,desc:"A waterfront community known for its marina promenade, apartment towers, restaurants and access to the beach and transport.",tags:["Waterfront","Apartments","Lifestyle"]},
- businessbay:{name:"Business Bay",lat:25.1851,lng:55.2644,desc:"A central mixed-use district close to Downtown Dubai, with residential towers, offices, hotels and canal-side living.",tags:["Central location","Business","Apartments"]},
- palm:{name:"Palm Jumeirah",lat:25.1124,lng:55.1390,desc:"A landmark island destination with luxury apartments, villas, resorts and distinctive waterfront settings.",tags:["Luxury","Waterfront","Villas"]},
- creek:{name:"Dubai Creek Harbour",lat:25.2075,lng:55.3428,desc:"A waterfront master community with modern residences, open spaces and views towards the historic creek and city skyline.",tags:["Master community","Waterfront","New development"]},
- hills:{name:"Dubai Hills Estate",lat:25.1120,lng:55.2470,desc:"A master-planned residential community with villas, apartments, green spaces, golf and family amenities.",tags:["Family living","Green spaces","Villas"]}
-};
-function showArea(key){
- const a=areas[key];
- document.getElementById("areaInfo").innerHTML="<h3>"+a.name+"</h3><p>"+a.desc+"</p>"+a.tags.map(t=>'<span class="area-tag">'+t+"</span>").join("");
- document.querySelectorAll("[data-area]").forEach(b=>b.classList.toggle("active",b.dataset.area===key));
- if(window.areaMap&&window.areaMarkers[key]){window.areaMap.setView([a.lat,a.lng],13);window.areaMarkers[key].openPopup();}
-}
-document.querySelectorAll("[data-area]").forEach(b=>b.addEventListener("click",()=>showArea(b.dataset.area)));
-if(window.L){
- window.areaMap=L.map("areaMap",{scrollWheelZoom:false}).setView([25.13,55.19],11);
- L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(window.areaMap);
- window.areaMarkers={};
- Object.entries(areas).forEach(([key,a])=>{
-  window.areaMarkers[key]=L.marker([a.lat,a.lng]).addTo(window.areaMap).bindPopup("<strong>"+a.name+"</strong>");
-  window.areaMarkers[key].on("click",()=>showArea(key));
- });
- setTimeout(()=>window.areaMap.invalidateSize(),300);
-}
-
-/* MARKET INTELLIGENCE TABS */
-const marketContent={
- overview:{title:"Understand the market",text:"Dubai is not one single property market. Performance and demand can differ significantly between communities, property types, developers and price segments.",items:["Compare similar properties in the same area.","Understand current supply and upcoming projects.","Consider service charges, transaction costs and ownership expenses."]},
- investment:{title:"Evaluate the investment",text:"A potential investment should be considered through both income and risk. Rental assumptions and future resale values are not guaranteed.",items:["Estimate net yield after service charges, vacancy and maintenance.","Compare the purchase price with similar completed properties.","Review liquidity, supply, developer reputation and your holding period."]},
- checklist:{title:"Before you commit",text:"Take time to review the full purchase and ownership picture. Ask questions and verify important information independently.",items:["Check the developer, project registration and escrow arrangements where applicable.","Read the reservation form, sale agreement and payment schedule.","Understand all fees, handover conditions and cancellation terms."]}
-};
-function showMarket(key){
- const c=marketContent[key];
- document.getElementById("marketPanel").innerHTML="<h3>"+c.title+"</h3><p>"+c.text+"</p><ul>"+c.items.map(x=>"<li>"+x+"</li>").join("")+"</ul>";
- document.querySelectorAll("[data-market]").forEach(b=>b.classList.toggle("active",b.dataset.market===key));
-}
-document.querySelectorAll("[data-market]").forEach(b=>b.addEventListener("click",()=>showMarket(b.dataset.market)));
-
-/* BUYER BRIEF */
-const questions=[
- {key:"objective",title:"What is your main objective?",options:["Personal residence","Investment / rental income","Capital appreciation","Second home","Exploring the market"]},
- {key:"timing",title:"When are you looking to buy?",options:["Immediately","Within 1–3 months","Within 3–6 months","Within 6–12 months","Just researching"]},
- {key:"budget",title:"What is your approximate budget?",options:["Below AED 750,000","AED 750k – 1.5m","AED 1.5m – 3m","AED 3m – 5m","AED 5m – 10m","Above AED 10m","Not decided"]},
- {key:"property",title:"What type of property interests you?",options:["Apartment","Villa / Townhouse","Luxury property","Commercial property","Off-plan","Ready property","Open to options"]},
- {key:"readiness",title:"How would you describe your buying readiness?",options:["Ready to proceed","Need to compare options","Need financing advice","Planning ahead"]},
- {key:"payment",title:"How do you expect to finance the purchase?",options:["Cash","Mortgage","Developer payment plan","Combination","Not decided"]}
+const services = [
+  {
+    icon: "⌂",
+    en: "Property Buying",
+    ar: "شراء العقارات",
+    descEn: "Guidance in identifying and evaluating properties that match your needs, preferences and budget.",
+    descAr: "مساعدة في تحديد العقارات المناسبة وتقييمها بما يتوافق مع احتياجاتك وميزانيتك."
+  },
+  {
+    icon: "◆",
+    en: "Property Investment",
+    ar: "الاستثمار العقاري",
+    descEn: "Explore Dubai property opportunities with attention to location, rental demand, costs and investment objectives.",
+    descAr: "استكشاف الفرص الاستثمارية في دبي مع دراسة الموقع والطلب الإيجاري والتكاليف والأهداف الاستثمارية."
+  },
+  {
+    icon: "▤",
+    en: "Off-Plan Properties",
+    ar: "العقارات قيد الإنشاء",
+    descEn: "Understand project details, developers, payment plans, handover expectations and relevant risks.",
+    descAr: "فهم تفاصيل المشاريع والمطورين وخطط الدفع ومواعيد التسليم والمخاطر المحتملة."
+  },
+  {
+    icon: "⌂",
+    en: "Ready Properties",
+    ar: "العقارات الجاهزة",
+    descEn: "Explore completed homes and investment properties across Dubai's established communities.",
+    descAr: "استكشاف العقارات الجاهزة للسكن أو الاستثمار في مختلف مناطق دبي."
+  },
+  {
+    icon: "◎",
+    en: "Market Guidance",
+    ar: "استشارات السوق العقاري",
+    descEn: "Compare locations, property types and market considerations to make a more informed decision.",
+    descAr: "مقارنة المناطق وأنواع العقارات والعوامل المؤثرة في السوق لاتخاذ قرار أكثر وعياً."
+  },
+  {
+    icon: "✦",
+    en: "Post-Sales Services",
+    ar: "خدمات ما بعد البيع",
+    descEn: "Continued assistance after purchase, including handover guidance, documentation coordination and property-related support.",
+    descAr: "متابعة ومساعدة بعد الشراء، بما يشمل إرشادات الاستلام وتنسيق المستندات والدعم المتعلق بالعقار."
+  }
 ];
-const answers={};
-let questionIndex=0;
-const questionArea=document.getElementById("questionArea");
-const progressFill=document.getElementById("progressFill");
-const backBtn=document.getElementById("backBtn");
-const nextBtn=document.getElementById("nextBtn");
-const formError=document.getElementById("formError");
-function renderQuestion(){
- formError.textContent="";
- const q=questions[questionIndex];
- progressFill.style.width=((questionIndex+1)/(questions.length+1)*100)+"%";
- questionArea.innerHTML='<div class="step-counter">STEP '+(questionIndex+1)+' OF '+(questions.length+1)+'</div><div class="question-title">'+q.title+'</div><div class="option-list">'+q.options.map(o=>'<label class="option"><input type="radio" name="'+q.key+'" value="'+o.replace(/"/g,"&quot;")+'" '+(answers[q.key]===o?"checked":"")+'><span>'+o+'</span></label>').join("")+"</div>";
- backBtn.style.visibility=questionIndex===0?"hidden":"visible";
- nextBtn.textContent="Continue";
+
+const areas = [
+  {
+    en: "Dubai Marina",
+    ar: "دبي مارينا",
+    descEn: "Waterfront living, established residential towers and an active rental market.",
+    descAr: "حياة على الواجهة البحرية وأبراج سكنية راسخة وسوق إيجاري نشط.",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    en: "Business Bay",
+    ar: "الخليج التجاري",
+    descEn: "A central business and residential district close to Downtown Dubai.",
+    descAr: "منطقة مركزية للأعمال والسكن بالقرب من وسط مدينة دبي.",
+    image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    en: "Palm Jumeirah",
+    ar: "نخلة جميرا",
+    descEn: "An internationally recognised waterfront destination with premium residences.",
+    descAr: "وجهة عالمية معروفة على الواجهة البحرية وتضم مساكن فاخرة.",
+    image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    en: "Dubai Creek Harbour",
+    ar: "مرسى خور دبي",
+    descEn: "A growing waterfront destination with residential and lifestyle developments.",
+    descAr: "وجهة ساحلية متنامية تضم مشاريع سكنية ومرافق عصرية.",
+    image: "https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    en: "Dubai Hills Estate",
+    ar: "دبي هيلز استيت",
+    descEn: "A master-planned community with parks, homes and lifestyle facilities.",
+    descAr: "مجتمع متكامل يضم حدائق ومساكن ومرافق متنوعة للحياة اليومية.",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    en: "Downtown Dubai",
+    ar: "وسط مدينة دبي",
+    descEn: "A landmark urban destination with residential, retail and hospitality options.",
+    descAr: "وجهة حضرية بارزة تضم خيارات سكنية وتجارية وفندقية.",
+    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+  }
+];
+
+const faqs = [
+  {
+    qEn: "Can foreigners buy property in Dubai?",
+    qAr: "هل يمكن للأجانب شراء عقارات في دبي؟",
+    aEn: "Yes. Foreign buyers can purchase freehold property in designated areas of Dubai, subject to applicable regulations and transaction requirements.",
+    aAr: "نعم، يمكن للأجانب شراء العقارات بنظام التملك الحر في المناطق المحددة في دبي، وفقاً للأنظمة والمتطلبات المعمول بها."
+  },
+  {
+    qEn: "Is Dubai property suitable for investment?",
+    qAr: "هل العقارات في دبي مناسبة للاستثمار؟",
+    aEn: "Dubai offers a range of property opportunities, but suitability depends on the individual property, purchase price, costs, rental demand, location and your risk profile. Returns are not guaranteed.",
+    aAr: "يوفر سوق دبي فرصاً عقارية متنوعة، لكن ملاءمة الاستثمار تعتمد على العقار وسعر الشراء والتكاليف والطلب الإيجاري والموقع ومستوى المخاطرة المقبول لديك. ولا توجد عوائد مضمونة."
+  },
+  {
+    qEn: "What is the difference between off-plan and ready property?",
+    qAr: "ما الفرق بين العقار قيد الإنشاء والعقار الجاهز؟",
+    aEn: "Off-plan property is purchased before construction is completed, often with a developer payment plan. Ready property is completed and may be available for occupation or rental, subject to its status.",
+    aAr: "العقار قيد الإنشاء يتم شراؤه قبل اكتمال البناء، وغالباً ما تكون له خطة دفع مع المطور. أما العقار الجاهز فقد اكتمل بناؤه ويمكن أن يكون متاحاً للسكن أو التأجير وفقاً لوضعه."
+  },
+  {
+    qEn: "Can you help after the purchase?",
+    qAr: "هل تقدم المساعدة بعد شراء العقار؟",
+    aEn: "Yes. Post-sales assistance can include guidance on handover, documentation coordination and relevant property-related next steps.",
+    aAr: "نعم، تشمل خدمات ما بعد البيع المساعدة في إجراءات الاستلام وتنسيق المستندات والإرشاد بشأن الخطوات التالية المتعلقة بالعقار."
+  },
+  {
+    qEn: "Do I need to be in Dubai to buy property?",
+    qAr: "هل يجب أن أكون في دبي حتى أشتري عقاراً؟",
+    aEn: "Not necessarily. Overseas buyers can often complete parts of the process remotely, subject to identity checks, documentation, powers of attorney where applicable and the requirements of the relevant parties.",
+    aAr: "ليس بالضرورة. يمكن للمشترين من خارج الدولة إتمام أجزاء من الإجراءات عن بُعد، وفقاً لمتطلبات التحقق من الهوية والمستندات والتوكيلات عند الحاجة والجهات المعنية."
+  }
+];
+
+let currentLanguage = "en";
+
+function renderServices() {
+  document.getElementById("servicesGrid").innerHTML = services.map(s => `
+    <article class="service-card">
+      <div class="card-icon">${s.icon}</div>
+      <h3>${currentLanguage === "en" ? s.en : s.ar}</h3>
+      <p>${currentLanguage === "en" ? s.descEn : s.descAr}</p>
+    </article>
+  `).join("");
 }
-function renderContact(){
- progressFill.style.width="100%";
- questionArea.innerHTML='<div class="step-counter">FINAL STEP</div><div class="question-title">How can I contact you?</div><div class="form-field"><label for="buyerName">Your name *</label><input id="buyerName" autocomplete="name" placeholder="Enter your name"></div><div class="form-field"><label for="buyerPhone">WhatsApp number *</label><input id="buyerPhone" type="tel" autocomplete="tel" placeholder="Include country code"></div><div class="form-field"><label for="buyerEmail">Email address (optional)</label><input id="buyerEmail" type="email" autocomplete="email" placeholder="Your email"></div><div class="form-field"><label for="buyerNotes">Additional details (optional)</label><textarea id="buyerNotes" placeholder="Preferred areas, questions or other details"></textarea></div>';
- backBtn.style.visibility="visible";
- nextBtn.textContent="Prepare WhatsApp Message";
+
+function renderAreas() {
+  document.getElementById("areasGrid").innerHTML = areas.map(a => `
+    <article class="area-card" style="background-image:url('${a.image}')">
+      <div class="area-content">
+        <h3>${currentLanguage === "en" ? a.en : a.ar}</h3>
+        <p>${currentLanguage === "en" ? a.descEn : a.descAr}</p>
+      </div>
+    </article>
+  `).join("");
 }
-function submitBrief(){
- const name=document.getElementById("buyerName").value.trim();
- const phone=document.getElementById("buyerPhone").value.trim();
- const email=document.getElementById("buyerEmail").value.trim();
- const notes=document.getElementById("buyerNotes").value.trim();
- if(!name||!phone){formError.textContent="Please enter your name and WhatsApp number.";return;}
- const digits=phone.replace(/\D/g,"");
- if(digits.length<7||digits.length>15){formError.textContent="Please check your WhatsApp number and country code.";return;}
- if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){formError.textContent="Please enter a valid email address.";return;}
- let msg="Hello Amr, I would like to discuss a property opportunity in Dubai.\n\nBUYER BRIEF\n";
- questions.forEach(q=>msg+=q.title+" "+(answers[q.key]||"Not specified")+"\n");
- msg+="\nCONTACT DETAILS\nName: "+name+"\nWhatsApp: "+phone+"\n";
- if(email)msg+="Email: "+email+"\n";
- if(notes)msg+="Additional details: "+notes+"\n";
- window.location.href="https://wa.me/971585446444?text="+encodeURIComponent(msg);
+
+function renderFaqs() {
+  document.getElementById("faqList").innerHTML = faqs.map((f, i) => `
+    <div class="faq-item">
+      <button class="faq-question" type="button" aria-expanded="false" onclick="toggleFaq(this)">
+        <span>${currentLanguage === "en" ? f.qEn : f.qAr}</span>
+        <span>+</span>
+      </button>
+      <div class="faq-answer">${currentLanguage === "en" ? f.aEn : f.aAr}</div>
+    </div>
+  `).join("");
 }
-nextBtn.addEventListener("click",()=>{
- if(questionIndex<questions.length){
-  const selected=questionArea.querySelector('input[type="radio"]:checked');
-  if(!selected){formError.textContent="Please select an option to continue.";return;}
-  answers[questions[questionIndex].key]=selected.value;
-  questionIndex++;
-  if(questionIndex<questions.length)renderQuestion();else renderContact();
- }else submitBrief();
+
+function toggleFaq(button) {
+  const item = button.closest(".faq-item");
+  const active = item.classList.toggle("active");
+  button.setAttribute("aria-expanded", String(active));
+  button.lastElementChild.textContent = active ? "−" : "+";
+}
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "en" ? "ar" : "en";
+  document.body.classList.toggle("arabic", currentLanguage === "ar");
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en][data-ar]").forEach(el => {
+    el.innerHTML = el.dataset[currentLanguage];
+  });
+
+  document.getElementById("languageToggle").textContent =
+    currentLanguage === "en" ? "العربية" : "English";
+
+  document.getElementById("leadName").placeholder =
+    currentLanguage === "en" ? "Your name" : "اسمك";
+
+  document.getElementById("leadEmail").placeholder =
+    currentLanguage === "en" ? "Your email address" : "بريدك الإلكتروني";
+
+  document.getElementById("leadMessage").placeholder =
+    currentLanguage === "en" ? "Tell me a little about what you are looking for" : "أخبرني قليلاً عمّا تبحث عنه";
+
+  const purpose = document.getElementById("leadPurpose");
+  purpose.innerHTML = currentLanguage === "en"
+    ? `<option value="">I am interested in...</option>
+       <option value="Buying a property">Buying a property</option>
+       <option value="Property investment">Property investment</option>
+       <option value="Off-plan property">Off-plan property</option>
+       <option value="Ready property">Ready property</option>
+       <option value="Selling a property">Selling a property</option>
+       <option value="General consultation">General consultation</option>`
+    : `<option value="">أنا مهتم بـ...</option>
+       <option value="شراء عقار">شراء عقار</option>
+       <option value="استثمار عقاري">استثمار عقاري</option>
+       <option value="عقار قيد الإنشاء">عقار قيد الإنشاء</option>
+       <option value="عقار جاهز">عقار جاهز</option>
+       <option value="بيع عقار">بيع عقار</option>
+       <option value="استشارة عامة">استشارة عامة</option>`;
+
+  const timeline = document.getElementById("leadTimeline");
+  timeline.innerHTML = currentLanguage === "en"
+    ? `<option value="">When are you planning to proceed?</option>
+       <option value="Immediately">Immediately</option>
+       <option value="Within 1 month">Within 1 month</option>
+       <option value="Within 3 months">Within 3 months</option>
+       <option value="Within 6 months">Within 6 months</option>
+       <option value="Just researching">Just researching</option>`
+    : `<option value="">متى تخطط للبدء؟</option>
+       <option value="فوراً">فوراً</option>
+       <option value="خلال شهر">خلال شهر</option>
+       <option value="خلال 3 أشهر">خلال 3 أشهر</option>
+       <option value="خلال 6 أشهر">خلال 6 أشهر</option>
+       <option value="ما زلت أبحث">ما زلت أبحث</option>`;
+
+  renderServices();
+  renderAreas();
+  renderFaqs();
+}
+
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("open");
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navLinks").classList.remove("open");
+  });
 });
-backBtn.addEventListener("click",()=>{
- if(questionIndex>0){questionIndex--;renderQuestion();}
+
+document.getElementById("leadForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("leadName").value.trim();
+  const email = document.getElementById("leadEmail").value.trim();
+  const purpose = document.getElementById("leadPurpose").value;
+  const timeline = document.getElementById("leadTimeline").value;
+  const message = document.getElementById("leadMessage").value.trim();
+
+  const text = [
+    "Hello Amr, I would like to discuss Dubai real estate.",
+    "Name: " + name,
+    "Email: " + (email || "Not provided"),
+    "Interest: " + purpose,
+    "Timeline: " + (timeline || "Not specified"),
+    "Message: " + (message || "Not provided")
+  ].join("\n");
+
+  window.open("https://wa.me/971585446444?text=" + encodeURIComponent(text), "_blank");
 });
-document.getElementById("currentYear").textContent=new Date().getFullYear();
-renderQuestion();
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+renderServices();
+renderAreas();
+renderFaqs();
 </script>
+
 </body>
 </html>
